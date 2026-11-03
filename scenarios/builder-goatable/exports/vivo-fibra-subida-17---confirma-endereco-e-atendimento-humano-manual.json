@@ -1,0 +1,626 @@
+{
+  "id": "01a19f4b-cbef-7795-a5cf-accca4061a4f",
+  "createdAt": "2026-11-03T02:45:07.183Z",
+  "updatedAt": "2026-11-03T03:06:59.927Z",
+  "name": "Vivo Fibra Subida 17 - Confirma endereço e atendimento humano (manual)",
+  "folderId": "01a189b0-3019-71fb-b065-89267955ddd3",
+  "groups": [
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-f84c5033f722",
+      "title": "Confirma endereço de instalação",
+      "blocks": [
+        {
+          "id": "01a19f4b-cbee-72ff-86d0-fc67764e02e3",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "cards": [],
+            "action": "Enviar botões",
+            "buttons": [
+              {
+                "id": "01a19f4b-cbee-72ff-86d1-026c5be42bb3",
+                "title": "Está certo ✅",
+                "examples": [
+                  "perfeito",
+                  "isso",
+                  "yes",
+                  "ok",
+                  "sim",
+                  "certo"
+                ],
+                "outgoingEdgeId": "01a19f4b-cbef-7795-a5cf-97cff9cc2bec"
+              },
+              {
+                "id": "01a19f4b-cbee-72ff-86d1-064ae6e26d7c",
+                "title": "Preciso corrigir ❌",
+                "examples": [
+                  "nao",
+                  "não",
+                  "errado",
+                  "incorreto",
+                  "preciso corrigir"
+                ],
+                "outgoingEdgeId": "01a19f4b-cbef-7795-a5cf-98cc5364c067"
+              }
+            ],
+            "channel": "{{channel}}",
+            "bodyText": "Por favor, confirme se o endereço de instalação está correto:\n\n*Cep*: {{cep}}\n*Logradouro*: Rua {{logradouro}}\n*Número*: {{numEndereco}}\n*Complemento*: {{complemento}}\n*Bairro*: {{bairro}}\n*Cidade-UF*: {{cidade}} - {{uf}}",
+            "sections": [],
+            "awaitReply": true,
+            "understandTypedReply": true
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 261.50665771484364,
+        "y": -353.29334228515614
+      }
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d1-0ba2dfc3115b",
+      "title": "Erro ao validar endereço",
+      "blocks": [
+        {
+          "id": "01a19f4b-cbee-72ff-86d1-0c100188f1d9",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "body": "Opa, não consegui validar seu endereço.",
+            "cards": [],
+            "action": "Enviar texto",
+            "buttons": [],
+            "channel": "{{channel}}",
+            "sections": []
+          },
+          "outgoingEdgeId": "01a19f4b-cbef-7795-a5cf-9ed1e38b6437"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1135.5866577148436,
+        "y": 408.4666577148438
+      }
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d1-11749cbe711c",
+      "title": "Atualiza endereço na API",
+      "blocks": [
+        {
+          "id": "01a19f4b-cbee-72ff-86d1-167c8b77a0c1",
+          "type": "Webhook",
+          "options": {
+            "webhook": {
+              "url": "{{resource.blip.fibrasubida17.apiurl}}",
+              "body": "{\"acao\": \"concluido\", \"plano\": \"{{planName}}\", \"preco\": \"{{price}}\", \"telefone\": \"{{wa_id}}\"}",
+              "method": "POST",
+              "headers": []
+            },
+            "responseVariableMapping": [
+              {
+                "id": "01a19f37-0718-766b-8da2-23f3ace1d79c",
+                "bodyPath": "data.idPedido",
+                "variableId": "01a19f4b-cbee-72ff-86d0-c791761f2680"
+              }
+            ]
+          }
+        },
+        {
+          "id": "01a19f4b-cbef-7795-a5cf-2a78a35c92f1",
+          "type": "Condition",
+          "items": [
+            {
+              "id": "01a19f4b-cbef-7795-a5cf-2ea740eaa006",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "01a19f4b-cbef-7795-a5cf-30bd91362358",
+                    "value": "true",
+                    "variableId": "01a19f4b-cbee-72ff-86d0-756a5139f2a8",
+                    "comparisonOperator": "Equal to"
+                  }
+                ]
+              }
+            }
+          ],
+          "outgoingEdgeId": "01a19f4b-cbef-7795-a5cf-93db5726d2b9"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1135.5866577148436,
+        "y": -353.29334228515614
+      }
+    },
+    {
+      "id": "01a19f4b-cbef-7795-a5cf-3509fb8fc77e",
+      "title": "Escolhe dado do endereço a corrigir",
+      "blocks": [
+        {
+          "id": "01a19f4b-cbef-7795-a5cf-3848e18907d7",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "cards": [],
+            "action": "Enviar lista",
+            "buttons": [],
+            "channel": "{{channel}}",
+            "bodyText": "Qual informação do endereço você quer corrigir?",
+            "sections": [
+              {
+                "rows": [
+                  {
+                    "id": "01a19f4b-cbef-7795-a5cf-3f57f2ecbf29",
+                    "title": "Cep"
+                  },
+                  {
+                    "id": "01a19f4b-cbef-7795-a5cf-40ef22bf801b",
+                    "title": "Logradouro"
+                  },
+                  {
+                    "id": "01a19f4b-cbef-7795-a5cf-47c32f5e1f76",
+                    "title": "Número"
+                  },
+                  {
+                    "id": "01a19f4b-cbef-7795-a5cf-4a498b1ab3f9",
+                    "title": "Complemento"
+                  },
+                  {
+                    "id": "01a19f4b-cbef-7795-a5cf-4df817a98abe",
+                    "title": "Bairro"
+                  },
+                  {
+                    "id": "01a19f4b-cbef-7795-a5cf-51aba2cad6fd",
+                    "title": "Cidade"
+                  },
+                  {
+                    "id": "01a19f4b-cbef-7795-a5cf-569c5e8af276",
+                    "title": "Uf"
+                  },
+                  {
+                    "id": "01a19f4b-cbef-7795-a5cf-5b0c2aeecb03",
+                    "title": "Ponto de referência"
+                  }
+                ],
+                "title": "Endereço"
+              }
+            ],
+            "awaitReply": true,
+            "buttonText": "Escolher",
+            "footerText": "",
+            "headerText": "",
+            "understandTypedReply": true
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 681.9866577148435,
+        "y": 116.14665771484381
+      }
+    },
+    {
+      "id": "01a19f4b-cbef-7795-a5cf-5cd2855d87dc",
+      "title": "Opção de atendimento",
+      "blocks": [
+        {
+          "id": "01a19f4b-cbef-7795-a5cf-61dfce812e61",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "cards": [],
+            "action": "Enviar botões",
+            "buttons": [
+              {
+                "id": "01a19f4b-cbef-7795-a5cf-65c630c8027f",
+                "title": "Falar com atendente✅",
+                "examples": [
+                  "atendente",
+                  "consultor",
+                  "falar",
+                  "sim"
+                ],
+                "outgoingEdgeId": "01a19f4b-cbef-7795-a5cf-a219dffb532c"
+              },
+              {
+                "id": "01a19f4b-cbef-7795-a5cf-68a813a7265d",
+                "title": "Encerra conversa❌",
+                "examples": [
+                  "encerra",
+                  "não",
+                  "nao",
+                  "nunca"
+                ],
+                "outgoingEdgeId": "01a19f4b-cbef-7795-a5cf-a5f755b34636"
+              }
+            ],
+            "channel": "{{channel}}",
+            "bodyText": "humm, ficou com alguma dúvida? 🤔\n\nGostaria de conversar com um de nossos especialistas? Ele poderá te ajudar a concluir seu pedido! 😁",
+            "sections": [],
+            "awaitReply": true,
+            "understandTypedReply": true
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": -333.46295517578113,
+        "y": 373.4842448242188
+      }
+    },
+    {
+      "id": "01a19f4b-cbef-7795-a5cf-6c97d1824adb",
+      "title": "Encerra conversa",
+      "blocks": [
+        {
+          "id": "01a19f4b-cbef-7795-a5cf-73d6715b4643",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "body": "Poxa! Se mudar de ideia, estou aqui para te ajudar!\n\nAgradeço seu contato! Até breve.",
+            "cards": [],
+            "action": "Enviar texto",
+            "buttons": [],
+            "channel": "{{channel}}",
+            "sections": []
+          }
+        },
+        {
+          "id": "01a19f4b-cbef-7795-a5cf-7605e140dc24",
+          "type": "endSession",
+          "options": {}
+        }
+      ],
+      "graphCoordinates": {
+        "x": -333.46295517578113,
+        "y": 746.7322448242187
+      }
+    },
+    {
+      "id": "01a19f4b-cbef-7795-a5cf-7a3a394dbf64",
+      "title": "Encerra conversa fora do horário",
+      "blocks": [
+        {
+          "id": "01a19f4b-cbef-7795-a5cf-7d44d651c422",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "body": "Olá! 😊\n\nVocê entrou em contato fora do nosso horário de atendimento que é de segunda a segunda, das 9h às 21h.\n\nAgradecemos por escolher a Vivo!",
+            "cards": [],
+            "action": "Enviar texto",
+            "buttons": [],
+            "channel": "{{channel}}",
+            "sections": []
+          }
+        },
+        {
+          "id": "01a19f4b-cbef-7795-a5cf-8057e9b94e0d",
+          "type": "endSession",
+          "options": {}
+        }
+      ],
+      "graphCoordinates": {
+        "x": 178.71624482421873,
+        "y": 746.7322448242187
+      }
+    },
+    {
+      "id": "01a19f4b-cbef-7795-a5cf-8459adc9071e",
+      "title": "Transfere para atendente",
+      "blocks": [
+        {
+          "id": "01a19f4b-cbef-7795-a5cf-8bb863ba7113",
+          "type": "transferToQueue",
+          "options": {
+            "queueId": "026bb49c-fcd2-4544-bcc8-b35b9bbc535a",
+            "outOfHoursEdgeId": "01a19f4b-cbef-7795-a5cf-abffc94dc84c"
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 178.71624482421873,
+        "y": 373.4842448242188
+      }
+    }
+  ],
+  "events": [
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-f71429037ab3",
+      "type": "start",
+      "outgoingEdgeId": "01a19f4b-cbef-7795-a5cf-8d641d7c0639",
+      "graphCoordinates": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ],
+  "variables": [
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-4f0ee3f54fc6",
+      "name": "session_id",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-5085939d1d94",
+      "name": "init_date_time",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-579c1aa1a28c",
+      "name": "current_flow",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-5a82f906706b",
+      "name": "current_flow_name",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-5c6d8277ad5b",
+      "name": "current_block",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-62a2aaa90609",
+      "name": "current_group",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-658773011286",
+      "name": "last_message",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-68b6074436ef",
+      "name": "media",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-6d6b758c8e32",
+      "name": "api_response",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-700ef1ea70f3",
+      "name": "api_status",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-756a5139f2a8",
+      "name": "api_ok",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-78e52265ceaf",
+      "name": "api_debug",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-7f1e5677d83d",
+      "name": "flow_response",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-8306d09639b2",
+      "name": "channel",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-8713dac1dcb4",
+      "name": "channel_phone",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-89b71d61ac73",
+      "name": "wa_id",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-8e315a174424",
+      "name": "user_name",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-90e53cc11937",
+      "name": "user_id",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-9600acde537c",
+      "name": "initial_channel",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-9bb27366acd7",
+      "name": "initial_message",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-9d3fa184437c",
+      "name": "template_name",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-a233ab70bd6f",
+      "name": "session_origin",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-a675278b89b6",
+      "name": "last_followup",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-aa210afb37c6",
+      "name": "last_intent",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-aca9e4f681bc",
+      "name": "last_sentiment",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-b298e4fef3f4",
+      "name": "last_offensive",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-b4297e673b3f",
+      "name": "last_entities",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-baa7a3b1fcd9",
+      "name": "planName",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-bfda6ca6536f",
+      "name": "price",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-c0ca5680174b",
+      "name": "termo",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-c791761f2680",
+      "name": "idPedido",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-ca322fdfb2d3",
+      "name": "planoEscolhido1",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-cf3d1ed86c41",
+      "name": "somaPreco",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-d3127f512d53",
+      "name": "email",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-d77192362437",
+      "name": "cpf",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-dbb3d3349588",
+      "name": "cep",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-de6681a609da",
+      "name": "logradouro",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-e0fe9ef8dfa3",
+      "name": "numEndereco",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-e58d77c345f3",
+      "name": "complemento",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-e8a7276a7716",
+      "name": "bairro",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-edbe258ab8e2",
+      "name": "cidade",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f4b-cbee-72ff-86d0-f15891c13910",
+      "name": "uf",
+      "isSessionVariable": false
+    }
+  ],
+  "edges": [
+    {
+      "id": "01a19f4b-cbef-7795-a5cf-8d641d7c0639",
+      "to": {
+        "groupId": "01a19f4b-cbee-72ff-86d0-f84c5033f722"
+      },
+      "from": {
+        "eventId": "01a19f4b-cbee-72ff-86d0-f71429037ab3"
+      }
+    },
+    {
+      "id": "01a19f4b-cbef-7795-a5cf-93db5726d2b9",
+      "to": {
+        "groupId": "01a19f4b-cbee-72ff-86d1-0ba2dfc3115b"
+      },
+      "from": {
+        "blockId": "01a19f4b-cbef-7795-a5cf-2a78a35c92f1"
+      }
+    },
+    {
+      "id": "01a19f4b-cbef-7795-a5cf-97cff9cc2bec",
+      "to": {
+        "groupId": "01a19f4b-cbee-72ff-86d1-11749cbe711c"
+      },
+      "from": {
+        "itemId": "01a19f4b-cbee-72ff-86d1-026c5be42bb3",
+        "blockId": "01a19f4b-cbee-72ff-86d0-fc67764e02e3"
+      }
+    },
+    {
+      "id": "01a19f4b-cbef-7795-a5cf-98cc5364c067",
+      "to": {
+        "groupId": "01a19f4b-cbef-7795-a5cf-3509fb8fc77e"
+      },
+      "from": {
+        "itemId": "01a19f4b-cbee-72ff-86d1-064ae6e26d7c",
+        "blockId": "01a19f4b-cbee-72ff-86d0-fc67764e02e3"
+      }
+    },
+    {
+      "id": "01a19f4b-cbef-7795-a5cf-9ed1e38b6437",
+      "to": {
+        "groupId": "01a19f4b-cbef-7795-a5cf-5cd2855d87dc"
+      },
+      "from": {
+        "blockId": "01a19f4b-cbee-72ff-86d1-0c100188f1d9"
+      }
+    },
+    {
+      "id": "01a19f4b-cbef-7795-a5cf-a219dffb532c",
+      "to": {
+        "groupId": "01a19f4b-cbef-7795-a5cf-8459adc9071e"
+      },
+      "from": {
+        "itemId": "01a19f4b-cbef-7795-a5cf-65c630c8027f",
+        "blockId": "01a19f4b-cbef-7795-a5cf-61dfce812e61"
+      }
+    },
+    {
+      "id": "01a19f4b-cbef-7795-a5cf-a5f755b34636",
+      "to": {
+        "groupId": "01a19f4b-cbef-7795-a5cf-6c97d1824adb"
+      },
+      "from": {
+        "itemId": "01a19f4b-cbef-7795-a5cf-68a813a7265d",
+        "blockId": "01a19f4b-cbef-7795-a5cf-61dfce812e61"
+      }
+    },
+    {
+      "id": "01a19f4b-cbef-7795-a5cf-abffc94dc84c",
+      "to": {
+        "groupId": "01a19f4b-cbef-7795-a5cf-7a3a394dbf64"
+      },
+      "from": {
+        "blockId": "01a19f4b-cbef-7795-a5cf-8bb863ba7113"
+      }
+    }
+  ],
+  "publicId": null,
+  "organizationId": "74d6acdf-822d-417d-a8d4-6a0f9e6b8c17",
+  "isArchived": false,
+  "isClosed": false
+}

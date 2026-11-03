@@ -1,0 +1,568 @@
+{
+  "id": "01a19f40-05a3-7472-b495-65345a6e18ba",
+  "createdAt": "2026-11-03T02:32:15.523Z",
+  "updatedAt": "2026-11-03T02:35:04.086Z",
+  "name": "Vivo Seguro Celular - Resumo, código SMS e conclusão do pedido (manual)",
+  "folderId": "01a189b0-3019-71fb-b065-89267955ddd3",
+  "groups": [
+    {
+      "id": "01a19f40-05a2-7039-80e0-185da829634c",
+      "title": "Confirma resumo do pedido",
+      "blocks": [
+        {
+          "id": "01a19f40-05a2-7039-80e0-1d8491a084f7",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "action": "Enviar botões",
+            "buttons": [
+              {
+                "id": "01a19f40-05a2-7039-80e0-22db15c33fb9",
+                "title": "Confirmar",
+                "examples": [
+                  "confirmar",
+                  "ok",
+                  "sim",
+                  "certo"
+                ],
+                "outgoingEdgeId": "01a19f42-248a-732d-9e9b-6fb736719c3b"
+              },
+              {
+                "id": "01a19f40-05a2-7039-80e0-26650942ee98",
+                "title": "Corrigir dados",
+                "examples": [
+                  "corrigir dados",
+                  "erro",
+                  "errado",
+                  "alterar"
+                ],
+                "outgoingEdgeId": "01a19f40-05a2-7039-80e0-5e6d1fda7f4e"
+              }
+            ],
+            "channel": "{{channel}}",
+            "bodyText": "📋 *Resumo do seu pedido*\nConfira abaixo os dados informados e o seguro escolhido:\n\n📱 *Dados do aparelho*\n*Marca*: {{marca}}\n*Modelo:* {{modelo}}\n*Armazenamento:* {{armazenamento}}\n*Tempo de uso do aparelho:* {{idadeAparelho}}\n\n👤 *Dados do titular*\n*Nome Social:* {{nomeSocial}}\n*CPF:* {{cpf}}\n*E-mail:* {{email}}\n\n🛡 *Seguro Solicitado*\n*Plano:* {{planoEscolhido}}\n*Valor mensal:* R$ {{valorPlano}}\n*Forma de pagamento:* Débito na fatura Vivo\n\nAo clicar em *Confirmar*, você declara que conferiu os dados acima e está de acordo com a contratação do seguro.",
+            "awaitReply": true,
+            "understandTypedReply": true
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 261.50665771484364,
+        "y": -353.29334228515614
+      }
+    },
+    {
+      "id": "01a19f40-05a2-7039-80e0-299f90746bea",
+      "title": "Pedido concluído",
+      "blocks": [
+        {
+          "id": "01a19f40-05a2-7039-80e0-2e3e762cdae0",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "body": "Estamos processando seu pedido de contratação do *Seguro Celular* da Vivo!\n\nEm até 24h você receberá a confirmação, dados de apólice e certificado do seguro no e-mail cadastrado no momento da compra. Também pode ser acessado diretamente no App Vivo.\n\nObrigada por confiar na *Vivo* para proteger o que é importante para você. 💜",
+            "cards": [],
+            "action": "Enviar texto",
+            "buttons": [],
+            "channel": "{{channel}}",
+            "sections": []
+          }
+        },
+        {
+          "id": "01a19f40-05a2-7039-80e0-328891fa62a0",
+          "type": "endSession",
+          "options": {}
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1135.5866577148436,
+        "y": 51.346657714843815
+      }
+    },
+    {
+      "id": "01a19f40-05a2-7039-80e0-37475aa919d0",
+      "title": "Conclui pedido na API",
+      "blocks": [
+        {
+          "id": "01a19f40-05a2-7039-80e0-39a0a0dc591d",
+          "type": "Webhook",
+          "options": {
+            "webhook": {
+              "url": "{{resource.blip.vivosegurocelular.apiUrl}}",
+              "body": "{\"acao\": \"concluido\", \"plano\": \"{{planName}}\", \"preco\": \"{{price}}\", \"telefone\": \"{{wa_id}}\"}",
+              "method": "POST",
+              "headers": []
+            },
+            "responseVariableMapping": [
+              {
+                "id": "01a19f37-0718-766b-8da2-23f3ace1d79c",
+                "bodyPath": "data.idPedido",
+                "variableId": "01a19f40-05a2-7039-80e0-0a2c5a97ee78"
+              }
+            ]
+          },
+          "outgoingEdgeId": "01a19f40-05a2-7039-80e0-6144f91b56cd"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1135.5866577148436,
+        "y": -353.29334228515614
+      }
+    },
+    {
+      "id": "01a19f40-05a2-7039-80e0-3c29e4bf696a",
+      "title": "Escolhe dado a corrigir",
+      "blocks": [
+        {
+          "id": "01a19f40-05a2-7039-80e0-42919c18c8d5",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "cards": [],
+            "action": "Enviar lista",
+            "buttons": [],
+            "channel": "{{channel}}",
+            "bodyText": "Qual dado deseja corrigir?",
+            "sections": [
+              {
+                "rows": [
+                  {
+                    "id": "01a19f40-05a2-7039-80e0-471fb77e82ef",
+                    "title": "Endereço"
+                  },
+                  {
+                    "id": "01a19f40-05a2-7039-80e0-492bf1a9946e",
+                    "title": "Nome Social"
+                  },
+                  {
+                    "id": "01a19f40-05a2-7039-80e0-4ccff5e9e5ad",
+                    "title": "CPF"
+                  },
+                  {
+                    "id": "01a19f40-05a2-7039-80e0-5002221b51b6",
+                    "title": "E-mail"
+                  }
+                ],
+                "title": "Dados"
+              }
+            ],
+            "awaitReply": true,
+            "buttonText": "Escolher dado",
+            "footerText": "",
+            "headerText": "",
+            "understandTypedReply": true
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 681.9866577148435,
+        "y": -320.17334228515614
+      }
+    },
+    {
+      "id": "01a19f41-072f-75ae-acce-c3953f6c78c9",
+      "title": "Pede código SMS",
+      "blocks": [
+        {
+          "id": "01a19f41-072f-75ae-acce-bd3df161c47c",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "body": "Para concluir a contratação do seu Plano, *digite o código SMS enviado.*",
+            "action": "Enviar texto",
+            "channel": "{{channel}}",
+            "awaitReply": true
+          },
+          "outgoingEdgeId": "01a19f42-266d-756d-a720-dae3808a9f3e"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 261.50665771484364,
+        "y": 131.9866577148438
+      }
+    },
+    {
+      "id": "01a19f41-10f6-758b-ac8b-80b5380254c4",
+      "title": "Código SMS inválido",
+      "blocks": [
+        {
+          "id": "01a19f41-10f6-758b-ac8b-7c674d904f02",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "action": "Enviar botões",
+            "buttons": [
+              {
+                "id": "b1",
+                "title": "Reenviar Código",
+                "examples": [
+                  "reenviar código",
+                  "não recebi",
+                  "não chegou",
+                  "enviar"
+                ],
+                "outgoingEdgeId": "01a19f42-2c16-7338-973d-9596c1d8c65f"
+              }
+            ],
+            "channel": "{{channel}}",
+            "bodyText": "Infelizmente, o código digitado é inválido.\n\nDigite novamente o *código enviado via SMS*.\n\nCaso não tenha recebido nenhum SMS, clique em *Reenviar Código*.",
+            "awaitReply": true,
+            "understandTypedReply": true
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 87.26665771484366,
+        "y": 362.38665771484375
+      }
+    },
+    {
+      "id": "01a19f41-1d23-7419-8c50-52c1c6d6143c",
+      "title": "Valida código SMS",
+      "blocks": [
+        {
+          "id": "01a19f41-1d23-7419-8c50-4d42c866e9a8",
+          "type": "Webhook",
+          "options": {
+            "webhook": {
+              "url": "{{resource.blip.vivosegurocelular.apiToken}}/ValidarToken",
+              "body": "{\"token\": \"{{last_message}}\", \"telefone\": \"{{wa_id}}\"}",
+              "method": "POST",
+              "headers": []
+            }
+          }
+        },
+        {
+          "id": "01a19f41-6d9b-72ca-aa82-a0d7352b7a14",
+          "type": "Condition",
+          "items": [
+            {
+              "id": "01a19f41-6d9b-72ca-aa82-a54f674ddb1b",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "01a19f41-6d9b-72ca-aa82-abc0b3a12db1",
+                    "value": "true",
+                    "variableId": "01a19f40-05a2-7039-80df-bae8a4a81f70",
+                    "comparisonOperator": "Equal to"
+                  }
+                ]
+              },
+              "outgoingEdgeId": "01a19f42-2851-75de-ac6e-4ecf26883a03"
+            }
+          ],
+          "outgoingEdgeId": "01a19f42-2a33-76f7-99b5-2ac7725bd9b8"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 713.6666577148435,
+        "y": 116.1466577148438
+      }
+    }
+  ],
+  "events": [
+    {
+      "id": "01a19f40-05a2-7039-80e0-16f85653127d",
+      "type": "start",
+      "outgoingEdgeId": "01a19f40-05a2-7039-80e0-564b2bec2b20",
+      "graphCoordinates": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ],
+  "variables": [
+    {
+      "id": "01a19f40-05a2-7039-80df-91ed3a7a4d62",
+      "name": "session_id",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-96c4dc89bce9",
+      "name": "init_date_time",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-9af908ed5aa7",
+      "name": "current_flow",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-9f9bd4fef205",
+      "name": "current_flow_name",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-a33d885d8af9",
+      "name": "current_block",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-a58c77bd61d3",
+      "name": "current_group",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-ab591e7003ab",
+      "name": "last_message",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-aca88bdf6ed6",
+      "name": "media",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-b1d063009de1",
+      "name": "api_response",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-b7c9385d029b",
+      "name": "api_status",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-bae8a4a81f70",
+      "name": "api_ok",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-be4003e74cfc",
+      "name": "api_debug",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-c01233cc23e6",
+      "name": "flow_response",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-c61ad5b23f4f",
+      "name": "channel",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-cbbfaeaf2a21",
+      "name": "channel_phone",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-cf7af0457d0b",
+      "name": "wa_id",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-d06f41aea6d3",
+      "name": "user_name",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-d61c96deeb0e",
+      "name": "user_id",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-dae56a828857",
+      "name": "initial_channel",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-decf59117f08",
+      "name": "initial_message",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-e108f5ad3beb",
+      "name": "template_name",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-e420be5c82fd",
+      "name": "session_origin",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-e8caed29cbe4",
+      "name": "last_followup",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-ee5fa7e2cd82",
+      "name": "last_intent",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-f14ebec1909d",
+      "name": "last_sentiment",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-f4e19d107fb3",
+      "name": "last_offensive",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-f96ea1861d17",
+      "name": "last_entities",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f40-05a2-7039-80df-ffe7e66fb5b3",
+      "name": "planName",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f40-05a2-7039-80e0-01afcdb2501d",
+      "name": "price",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f40-05a2-7039-80e0-05b03c43819e",
+      "name": "termo",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f40-05a2-7039-80e0-0a2c5a97ee78",
+      "name": "idPedido",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f40-05a2-7039-80e0-0fbadd4bb66b",
+      "name": "resumo",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f40-05a2-7039-80e0-11d4ca633303",
+      "name": "confirma",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f40-136d-715b-b574-4e1df746a414",
+      "name": "marca",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f40-17de-7513-a0b9-30e51cb96859",
+      "name": "modelo",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f40-1c46-740c-bd7a-0959f956af98",
+      "name": "armazenamento",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f40-20b7-7422-a94c-5aff70cd2935",
+      "name": "idadeAparelho",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f40-2523-73dd-8e1f-d5cb71c3147e",
+      "name": "nomeSocial",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f40-2980-7428-b923-6be9f57ebd71",
+      "name": "cpf",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f40-2dd4-7019-a4c1-739dd519ec4e",
+      "name": "email",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f40-3248-76f8-8924-7fbce5c9ddad",
+      "name": "planoEscolhido",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f40-36be-73a1-8b2a-d583d51dc7e7",
+      "name": "valorPlano",
+      "isSessionVariable": false
+    }
+  ],
+  "edges": [
+    {
+      "id": "01a19f40-05a2-7039-80e0-564b2bec2b20",
+      "to": {
+        "groupId": "01a19f40-05a2-7039-80e0-185da829634c"
+      },
+      "from": {
+        "eventId": "01a19f40-05a2-7039-80e0-16f85653127d"
+      }
+    },
+    {
+      "id": "01a19f40-05a2-7039-80e0-5e6d1fda7f4e",
+      "to": {
+        "groupId": "01a19f40-05a2-7039-80e0-3c29e4bf696a"
+      },
+      "from": {
+        "itemId": "01a19f40-05a2-7039-80e0-26650942ee98",
+        "blockId": "01a19f40-05a2-7039-80e0-1d8491a084f7"
+      }
+    },
+    {
+      "id": "01a19f40-05a2-7039-80e0-6144f91b56cd",
+      "to": {
+        "groupId": "01a19f40-05a2-7039-80e0-299f90746bea"
+      },
+      "from": {
+        "blockId": "01a19f40-05a2-7039-80e0-39a0a0dc591d"
+      }
+    },
+    {
+      "id": "01a19f42-248a-732d-9e9b-6fb736719c3b",
+      "to": {
+        "groupId": "01a19f41-072f-75ae-acce-c3953f6c78c9"
+      },
+      "from": {
+        "itemId": "01a19f40-05a2-7039-80e0-22db15c33fb9",
+        "blockId": "01a19f40-05a2-7039-80e0-1d8491a084f7"
+      }
+    },
+    {
+      "id": "01a19f42-266d-756d-a720-dae3808a9f3e",
+      "to": {
+        "groupId": "01a19f41-1d23-7419-8c50-52c1c6d6143c"
+      },
+      "from": {
+        "blockId": "01a19f41-072f-75ae-acce-bd3df161c47c"
+      }
+    },
+    {
+      "id": "01a19f42-2851-75de-ac6e-4ecf26883a03",
+      "to": {
+        "groupId": "01a19f40-05a2-7039-80e0-37475aa919d0"
+      },
+      "from": {
+        "itemId": "01a19f41-6d9b-72ca-aa82-a54f674ddb1b",
+        "blockId": "01a19f41-6d9b-72ca-aa82-a0d7352b7a14"
+      }
+    },
+    {
+      "id": "01a19f42-2a33-76f7-99b5-2ac7725bd9b8",
+      "to": {
+        "groupId": "01a19f41-10f6-758b-ac8b-80b5380254c4"
+      },
+      "from": {
+        "blockId": "01a19f41-6d9b-72ca-aa82-a0d7352b7a14"
+      }
+    },
+    {
+      "id": "01a19f42-2c16-7338-973d-9596c1d8c65f",
+      "to": {
+        "groupId": "01a19f41-072f-75ae-acce-c3953f6c78c9"
+      },
+      "from": {
+        "itemId": "b1",
+        "blockId": "01a19f41-10f6-758b-ac8b-7c674d904f02"
+      }
+    }
+  ],
+  "publicId": null,
+  "organizationId": "74d6acdf-822d-417d-a8d4-6a0f9e6b8c17",
+  "isArchived": false,
+  "isClosed": false
+}

@@ -1,0 +1,473 @@
+{
+  "schemaVersion": "2.0",
+  "status": "confirmed",
+  "businessConfirmation": {
+    "responsible": "Renan",
+    "date": "2026-11-02",
+    "evidenceFile": "docs/piloto/aceite-cenarios-2026-11-02.md"
+  },
+  "note": "Cenarios DERIVADOS do grafo pelo desenvolvimento (decisao Q15). Resultados de negocio confirmados pelo responsavel em 02/11/2026 (ver `businessConfirmation`); sem registros reais de conversa. Respostas HTTP sao fixtures explicitas e ficticias, nao registros reais. `@state:<titulo>` vira o id do estado de origem. Em 02/11/2026 o responsavel decidiu descartar os marcadores so escritos (docs/piloto/aceite-dados-2026-11-02.md): P-08 verifica a comparacao sem o descarte (config none) e P-08b o pacote entregue.",
+  "journeyId": "vivofixadados/cpf",
+  "resources": {
+    "blip.vivofixadados.apiHub": "https://hub.exemplo.test",
+    "blip.vivofixadados.apiurl": "https://api.exemplo.test/v2/data"
+  },
+  "baseVars": {
+    "tipoPessoa": "Pessoa Fisica",
+    "idAbandono": "@state:Direciona_Abandono"
+  },
+  "scenarios": [
+    {
+      "id": "P-01",
+      "title": "CPF valido: valida, consulta e segue para a continuacao",
+      "startAt": "CPF",
+      "input": [
+        "529.982.247-25"
+      ],
+      "http": [
+        {
+          "method": "GET",
+          "urlIncludes": "/CPF/52998224725",
+          "status": 200,
+          "body": {
+            "nome": "Fulano de Tal"
+          }
+        },
+        {
+          "method": "POST",
+          "urlIncludes": "api.exemplo.test",
+          "status": 200,
+          "body": {
+            "isValid": true,
+            "data": {
+              "ok": 1
+            }
+          }
+        }
+      ],
+      "stopAt": "Vencimento WPP",
+      "expect": {
+        "groups": [
+          "CPF",
+          "Valida CPF",
+          "API Busca CPF",
+          "API Dados Pessoais",
+          "Vencimento WPP"
+        ],
+        "messages": [
+          "Informe, por gentileza, seu *CPF* completo"
+        ],
+        "http": [
+          [
+            "GET",
+            "/CPF/52998224725"
+          ],
+          [
+            "POST",
+            "api.exemplo.test"
+          ]
+        ],
+        "events": [
+          "Cpf exibicao"
+        ],
+        "end": "stopAt",
+        "vars": {
+          "cpf": "52998224725"
+        }
+      }
+    },
+    {
+      "id": "P-02",
+      "title": "CPF invalido: pede de novo; depois valido segue para a consulta",
+      "startAt": "CPF",
+      "input": [
+        "123",
+        "52998224725"
+      ],
+      "http": [
+        {
+          "method": "GET",
+          "urlIncludes": "/CPF/52998224725",
+          "status": 200,
+          "body": {
+            "nome": "Fulano"
+          }
+        },
+        {
+          "method": "POST",
+          "urlIncludes": "api.exemplo.test",
+          "status": 200,
+          "body": {
+            "isValid": true,
+            "data": {
+              "ok": 1
+            }
+          }
+        }
+      ],
+      "stopAt": "Vencimento WPP",
+      "expect": {
+        "groups": [
+          "CPF",
+          "Valida CPF",
+          "DI CPF",
+          "Valida CPF",
+          "API Busca CPF",
+          "API Dados Pessoais",
+          "Vencimento WPP"
+        ],
+        "messages": [
+          "O CPF foi digitado errado, ou está inválido"
+        ],
+        "http": [
+          [
+            "GET",
+            "/CPF/52998224725"
+          ],
+          [
+            "POST",
+            "api.exemplo.test"
+          ]
+        ],
+        "end": "stopAt"
+      }
+    },
+    {
+      "id": "P-03",
+      "title": "Sem digitos: segue para o estado de excecao e depois para o agente",
+      "startAt": "CPF",
+      "input": [
+        "nao sei"
+      ],
+      "http": [],
+      "stopAt": "GPT - salva input",
+      "expect": {
+        "groups": [
+          "CPF",
+          "Valida CPF",
+          "Exceções",
+          "GPT - salva input"
+        ],
+        "http": [],
+        "end": "stopAt"
+      }
+    },
+    {
+      "id": "P-04",
+      "title": "API de dados pessoais responde 500: caminho de erro",
+      "startAt": "CPF",
+      "input": [
+        "52998224725"
+      ],
+      "http": [
+        {
+          "method": "GET",
+          "urlIncludes": "/CPF/52998224725",
+          "status": 200,
+          "body": {
+            "nome": "Fulano"
+          }
+        },
+        {
+          "method": "POST",
+          "urlIncludes": "api.exemplo.test",
+          "status": 500,
+          "body": "erro interno"
+        }
+      ],
+      "stopAt": "Email",
+      "expect": {
+        "groups": [
+          "CPF",
+          "Valida CPF",
+          "API Busca CPF",
+          "API Dados Pessoais",
+          "Erro API Dados Pessoais",
+          "Email"
+        ],
+        "messages": [
+          "aconteceu algum erro ao validar seus dados"
+        ],
+        "end": "stopAt"
+      }
+    },
+    {
+      "id": "P-05a",
+      "title": "API responde 200 com isValid=false: caminho de erro",
+      "startAt": "CPF",
+      "input": [
+        "52998224725"
+      ],
+      "http": [
+        {
+          "method": "GET",
+          "urlIncludes": "/CPF/52998224725",
+          "status": 200,
+          "body": {
+            "nome": "Fulano"
+          }
+        },
+        {
+          "method": "POST",
+          "urlIncludes": "api.exemplo.test",
+          "status": 200,
+          "body": {
+            "isValid": false,
+            "data": {
+              "x": 1
+            }
+          }
+        }
+      ],
+      "stopAt": "Email",
+      "expect": {
+        "groups": [
+          "API Dados Pessoais",
+          "Erro API Dados Pessoais",
+          "Email"
+        ],
+        "end": "stopAt"
+      }
+    },
+    {
+      "id": "P-05b",
+      "title": "API responde 200 com data=null: caminho de erro",
+      "startAt": "CPF",
+      "input": [
+        "52998224725"
+      ],
+      "http": [
+        {
+          "method": "GET",
+          "urlIncludes": "/CPF/52998224725",
+          "status": 200,
+          "body": {
+            "nome": "Fulano"
+          }
+        },
+        {
+          "method": "POST",
+          "urlIncludes": "api.exemplo.test",
+          "status": 200,
+          "body": {
+            "isValid": true,
+            "data": null
+          }
+        }
+      ],
+      "stopAt": "Email",
+      "expect": {
+        "groups": [
+          "API Dados Pessoais",
+          "Erro API Dados Pessoais",
+          "Email"
+        ],
+        "end": "stopAt"
+      }
+    },
+    {
+      "id": "P-06",
+      "title": "Sem resposta no prazo (timeout do CPF): destino de abandono",
+      "startAt": "CPF",
+      "input": [
+        {
+          "timeout": true
+        }
+      ],
+      "http": [],
+      "stopAt": "Direciona_Abandono",
+      "expect": {
+        "groups": [
+          "CPF",
+          "Roteador de timeout",
+          "Destino {{idAbandono}}",
+          "Direciona_Abandono"
+        ],
+        "end": "stopAt"
+      }
+    },
+    {
+      "id": "P-07a",
+      "title": "Abandono com retorno do cliente (tunnel.owner definido): volta a validar o CPF",
+      "startAt": "Abandono CPF",
+      "vars": {
+        "tunnel_owner": "campanha",
+        "identificadorPedido": "123"
+      },
+      "input": [
+        "52998224725"
+      ],
+      "http": [
+        {
+          "method": "POST",
+          "urlIncludes": "api.exemplo.test",
+          "status": 200,
+          "body": {
+            "ok": true
+          }
+        },
+        {
+          "method": "POST",
+          "urlIncludes": "api.exemplo.test",
+          "status": 200,
+          "body": {
+            "ok": true
+          }
+        }
+      ],
+      "stopAt": "Valida CPF",
+      "expect": {
+        "groups": [
+          "Abandono CPF",
+          "Valida CPF"
+        ],
+        "messages": [
+          "falta pouco para finalizar a sua contratação"
+        ],
+        "http": [
+          [
+            "POST",
+            "api.exemplo.test"
+          ],
+          [
+            "POST",
+            "api.exemplo.test"
+          ]
+        ],
+        "end": "stopAt",
+        "vars": {
+          "retomada": "retomada1"
+        }
+      }
+    },
+    {
+      "id": "P-07b",
+      "title": "Abandono sem resposta no prazo: so o lembrete e a chamada de abandono; segue ao destino calculado (abandono2D)",
+      "startAt": "Abandono CPF",
+      "vars": {
+        "identificadorPedido": "123",
+        "abandono2D": "@state:Abandono Geral 2D"
+      },
+      "input": [
+        {
+          "timeout": true
+        }
+      ],
+      "http": [
+        {
+          "method": "POST",
+          "urlIncludes": "api.exemplo.test",
+          "status": 200,
+          "body": {
+            "ok": true
+          }
+        }
+      ],
+      "stopAt": "Abandono Geral 2D",
+      "expect": {
+        "groups": [
+          "Abandono CPF",
+          "Roteador de timeout",
+          "Destino {{abandono2D}}",
+          "Abandono Geral 2D"
+        ],
+        "http": [
+          [
+            "POST",
+            "api.exemplo.test"
+          ]
+        ],
+        "end": "stopAt"
+      }
+    },
+    {
+      "id": "P-08",
+      "title": "Pessoa juridica (EMPRESA em maiusculas): a comparacao ignora a caixa e a etapa do CPF e gravada (verificacao SEM a decisao de descartar marcadores)",
+      "startAt": "CPF",
+      "vars": {
+        "tipoPessoa": "EMPRESA"
+      },
+      "input": [
+        "52998224725"
+      ],
+      "http": [
+        {
+          "method": "GET",
+          "urlIncludes": "/CPF/52998224725",
+          "status": 200,
+          "body": {
+            "nome": "Fulano"
+          }
+        },
+        {
+          "method": "POST",
+          "urlIncludes": "api.exemplo.test",
+          "status": 200,
+          "body": {
+            "isValid": true,
+            "data": {
+              "ok": 1
+            }
+          }
+        }
+      ],
+      "stopAt": "Vencimento WPP",
+      "expect": {
+        "groups": [
+          "CPF",
+          "Valida CPF",
+          "API Busca CPF"
+        ],
+        "end": "stopAt",
+        "vars": {
+          "contact_extras_Etapa_Cpf": "1"
+        }
+      },
+      "config": "none"
+    },
+    {
+      "id": "P-08b",
+      "title": "Pessoa juridica no pacote entregue (descarte de marcadores aceito em 02/11/2026): a etapa do CPF NAO e gravada",
+      "startAt": "CPF",
+      "vars": {
+        "tipoPessoa": "EMPRESA"
+      },
+      "input": [
+        "52998224725"
+      ],
+      "http": [
+        {
+          "method": "GET",
+          "urlIncludes": "/CPF/52998224725",
+          "status": 200,
+          "body": {
+            "nome": "Fulano"
+          }
+        },
+        {
+          "method": "POST",
+          "urlIncludes": "api.exemplo.test",
+          "status": 200,
+          "body": {
+            "isValid": true,
+            "data": {
+              "ok": 1
+            }
+          }
+        }
+      ],
+      "stopAt": "Vencimento WPP",
+      "expect": {
+        "groups": [
+          "CPF",
+          "Valida CPF",
+          "API Busca CPF"
+        ],
+        "end": "stopAt",
+        "vars": {
+          "contact_extras_Etapa_Cpf": ""
+        }
+      }
+    }
+  ]
+}

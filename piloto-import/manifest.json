@@ -1,0 +1,138 @@
+{
+  "schemaVersion": "2.0",
+  "converterVersion": "0.4.0",
+  "profile": "kayros-current-adapted",
+  "referenceCommits": {
+    "os": "826b73258ab93ea80e347c5fb9a9501bc7791372",
+    "engine": "b1f69987406fc6714068ba5106ef50dea00f9f3d",
+    "broker": "4b5f67612e6001ff0f5793d6259cf8df55cd23d1"
+  },
+  "source": {
+    "runId": "2026-11-02T04-26-43-071Z-e44c3a22"
+  },
+  "configuration": {
+    "status": "pilot_decisions_recorded"
+  },
+  "delivery": {
+    "automaticInstall": false,
+    "publish": false,
+    "bindPhoneNumber": false,
+    "manualImport": true
+  },
+  "bots": [
+    {
+      "bot": "vivofixadados",
+      "status": "structurally_valid",
+      "file": "flows/kayros-current-adapted/vivofixadados.json",
+      "stats": {
+        "states": 129,
+        "groups": 597,
+        "blocks": 1480,
+        "edges": 1418
+      }
+    },
+    {
+      "bot": "vivofixadados",
+      "status": "structurally_valid",
+      "file": "flows/kayros-current-adapted/vivofixadados.teste-cpf.json",
+      "variant": "teste-cpf",
+      "stats": {
+        "states": 129,
+        "groups": 598,
+        "blocks": 1481,
+        "edges": 1419
+      }
+    },
+    {
+      "bot": "vivofixadados",
+      "status": "structurally_valid",
+      "file": "flows/kayros-current-adapted/vivofixadados.teste-abandono-cpf.json",
+      "variant": "teste-abandono-cpf",
+      "stats": {
+        "states": 129,
+        "groups": 598,
+        "blocks": 1481,
+        "edges": 1419
+      }
+    },
+    {
+      "bot": "vivofixadados",
+      "status": "structurally_valid",
+      "file": "flows/kayros-current-adapted/vivofixadados.teste-flows-email-cpf-e-vencimento.json",
+      "variant": "teste-flows-email-cpf-e-vencimento",
+      "stats": {
+        "states": 129,
+        "groups": 598,
+        "blocks": 1481,
+        "edges": 1419
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "adaptations.json",
+      "bytes": 122568,
+      "sha256": "8da30c8a2e6cd6217c4affc7c76826afd0bbe1b94bf3c45467923c138dca570b"
+    },
+    {
+      "path": "coverage.json",
+      "bytes": 1383,
+      "sha256": "c052a8f47c11b11e16af88fde7d0d1d9d17df6f2b6873bd02b0ca15106ef5b75"
+    },
+    {
+      "path": "diagnostics.json",
+      "bytes": 224749,
+      "sha256": "06723470b060cb5dd371d5ea291f10afa08d612f235a067f03198f0209768fa7"
+    },
+    {
+      "path": "entry-parameters.json",
+      "bytes": 21518,
+      "sha256": "d207755522cabd250daa611b87982bfe25f5b56bedda8f49aef1ce7c76f63a7c"
+    },
+    {
+      "path": "flows/kayros-current-adapted/vivofixadados.json",
+      "bytes": 1357425,
+      "sha256": "38af0a26e3310932381d15be33090fd34112a1300fa4e05841fb6b68ea805895"
+    },
+    {
+      "path": "flows/kayros-current-adapted/vivofixadados.teste-abandono-cpf.json",
+      "bytes": 1358209,
+      "sha256": "4311ead34d81cf496b50c81cd83d0e01df19393e5d61b86df344eb502c7f1645"
+    },
+    {
+      "path": "flows/kayros-current-adapted/vivofixadados.teste-cpf.json",
+      "bytes": 1358085,
+      "sha256": "15619dc6e9eef6009de1b81a8c520f4f2ad6576e81fa9efec1429d47bf23d142"
+    },
+    {
+      "path": "flows/kayros-current-adapted/vivofixadados.teste-flows-email-cpf-e-vencimento.json",
+      "bytes": 1358214,
+      "sha256": "156c07179a733beeb7a9ac50322cc9447193e1f0d86cac231026ed742f693ff6"
+    },
+    {
+      "path": "mapping.json",
+      "bytes": 1083144,
+      "sha256": "88b577e3c47135cd30c5fc0c80502e0a0eb2f7a58dbcb48ba690689e60b393a3"
+    },
+    {
+      "path": "passes.json",
+      "bytes": 4512,
+      "sha256": "924d62020c077700b70cee35eb8c5cf1d7ab72ce03e394eb433b96acff9894f9"
+    },
+    {
+      "path": "reports/conversion.md",
+      "bytes": 2929,
+      "sha256": "707303e6608b2773db4689a8e188cfb583eefadc49e3e781a0833a711adb9190"
+    },
+    {
+      "path": "secrets-to-fill.json",
+      "bytes": 8240,
+      "sha256": "97582d85aa29a3a6ae64effa2f7c330a80849693ced85d7f35d9c0baaed0bfd2"
+    },
+    {
+      "path": "validation/static.json",
+      "bytes": 919,
+      "sha256": "929d23931bffb66ff4adb5cae68b97528a9419d85f999991b6ddfb7e7cf6a226"
+    }
+  ]
+}

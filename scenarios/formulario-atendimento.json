@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "2.0",
+  "status": "confirmed",
+  "businessConfirmation": {
+    "responsible": "Renan",
+    "date": "2026-11-02",
+    "evidenceFile": "docs/piloto/aceite-cenarios-2026-11-02.md"
+  },
+  "note": "Provas do padrao de formulario (WhatsApp Flow) e de atendimento humano do piloto (F3-06). DERIVADOS do grafo; resultados confirmados em 02/11/2026. F-02 depende do shim do envelope `input.message` (adaptacao script-reads-message-envelope), a validar na homologacao.",
+  "files": [
+    {
+      "bot": "vivofixadados",
+      "resources": {},
+      "baseVars": {
+        "flowsDadosPessoais": "111222333",
+        "cpf": "52998224725",
+        "contact_email": "cliente@exemplo.test",
+        "variaveisBI": "{}",
+        "idAbandono": "@state:Direciona_Abandono"
+      },
+      "scenarios": [
+        {
+          "id": "F-01",
+          "title": "Formulario enviado como Flow e cliente escolhe 'continuar' (coleta alternativa por texto)",
+          "startAt": "Flows Email, CPF e Vencimento",
+          "input": [
+            "continuar"
+          ],
+          "http": [],
+          "stopAt": "Email",
+          "expect": {
+            "groups": [
+              "Flows Email, CPF e Vencimento",
+              "Email"
+            ],
+            "messages": [
+              "111222333"
+            ],
+            "end": "stopAt"
+          }
+        },
+        {
+          "id": "F-02",
+          "title": "Retorno estruturado do Flow (flow_response): o script do envelope le o retorno e a jornada segue para a consulta de CPF",
+          "startAt": "Flows Email, CPF e Vencimento",
+          "input": [
+            {
+              "flowResponse": {
+                "cpf": "52998224725",
+                "vencimento": "10",
+                "email": "novo@exemplo.test"
+              }
+            }
+          ],
+          "http": [],
+          "stopAt": "API Busca CPF",
+          "expect": {
+            "groups": [
+              "Flows Email, CPF e Vencimento",
+              "API Busca CPF"
+            ],
+            "end": "stopAt",
+            "vars": {
+              "contact_extras_cpf": "52998224725",
+              "contact_extras_vencimentoFatura": "10"
+            }
+          }
+        },
+        {
+          "id": "F-03",
+          "title": "Sem retorno do Flow no prazo: segue o destino de abandono",
+          "startAt": "Flows Email, CPF e Vencimento",
+          "input": [
+            {
+              "timeout": true
+            }
+          ],
+          "http": [],
+          "stopAt": "Direciona_Abandono",
+          "expect": {
+            "groups": [
+              "Flows Email, CPF e Vencimento",
+              "Roteador de timeout",
+              "Direciona_Abandono"
+            ],
+            "end": "stopAt"
+          }
+        }
+      ]
+    },
+    {
+      "bot": "bkovivofixamsgativaah",
+      "resources": {},
+      "baseVars": {},
+      "scenarios": [
+        {
+          "id": "D-01",
+          "title": "Atendimento humano sem fila configurada: aviso e encerramento explicito, sem UUID de fila inventado",
+          "startAt": "4.0 - Atendimento humano",
+          "input": [],
+          "http": [],
+          "expect": {
+            "groups": [
+              "4.0 - Atendimento humano"
+            ],
+            "messages": [
+              "não consigo transferir"
+            ],
+            "end": "ended",
+            "endDetail": "fila_nao_configurada"
+          }
+        },
+        {
+          "id": "D-02",
+          "title": "Atendimento humano com a fila informada na configuracao: transfere para a fila",
+          "startAt": "4.0 - Atendimento humano",
+          "queue": "a7144fc1-908a-418c-bc25-775d2a75163e",
+          "input": [],
+          "http": [],
+          "expect": {
+            "groups": [
+              "4.0 - Atendimento humano"
+            ],
+            "end": "queue",
+            "endDetail": "a7144fc1-908a-418c-bc25-775d2a75163e"
+          }
+        }
+      ]
+    }
+  ]
+}

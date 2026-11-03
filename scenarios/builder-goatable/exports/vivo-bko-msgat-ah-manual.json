@@ -1,0 +1,344 @@
+{
+  "id": "01a19f31-7178-707b-b2d5-877d1583cd9c",
+  "createdAt": "2026-11-03T02:16:20.088Z",
+  "updatedAt": "2026-11-03T02:18:25.029Z",
+  "name": "Vivo BKO MsgAt AH (manual)",
+  "folderId": "01a189b0-3019-71fb-b065-89267955ddd3",
+  "groups": [
+    {
+      "id": "01a19f31-7b19-77fb-8266-f647035c5433",
+      "title": "Confirma continuar atendimento",
+      "blocks": [
+        {
+          "id": "01a19f31-7b19-77fb-8266-f33f52e62fc3",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "action": "Enviar botões",
+            "buttons": [
+              {
+                "id": "b1",
+                "title": "Sim 👍",
+                "examples": [
+                  "sim",
+                  "quero",
+                  "desejo",
+                  "ok",
+                  "vamos",
+                  "pode ser",
+                  "beleza",
+                  "saber mais"
+                ],
+                "outgoingEdgeId": "01a19f33-2bd8-716b-a727-4abaf854ae4e"
+              },
+              {
+                "id": "b2",
+                "title": "Não",
+                "examples": [
+                  "nao",
+                  "cancela",
+                  "agora não"
+                ],
+                "outgoingEdgeId": "01a19f33-2dbb-73bc-a5c4-47e1e2c921e7"
+              }
+            ],
+            "channel": "{{channel}}",
+            "bodyText": "Olá! Podemos continuar o seu atendimento agora?",
+            "awaitReply": true,
+            "understandTypedReply": true
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 454,
+        "y": 15
+      }
+    },
+    {
+      "id": "01a19f31-d1f2-72fc-83f8-80365501f463",
+      "title": "Direciona para atendente",
+      "blocks": [
+        {
+          "id": "01a19f31-d1f2-72fc-83f8-7eb7868247f1",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "body": "Certo! Aguarde um instante que estamos te direcionando para um especialista para que consiga ajustar os dados. 💬",
+            "action": "Enviar texto",
+            "channel": "{{channel}}"
+          }
+        },
+        {
+          "id": "01a19f32-3d9f-7139-a900-cd8bfe135203",
+          "type": "journeyEvent",
+          "options": {
+            "payload": [],
+            "eventName": "AtendimentosRealizados"
+          }
+        },
+        {
+          "id": "01a19f32-5dfc-77af-a65f-290445f6df58",
+          "type": "transferToQueue",
+          "options": {
+            "queueId": "026bb49c-fcd2-4544-bcc8-b35b9bbc535a",
+            "outOfHoursEdgeId": "01a19f33-2f9f-70c9-b751-e677b60546b6"
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 813,
+        "y": -255
+      }
+    },
+    {
+      "id": "01a19f31-dbb6-71e5-b1e5-80ee5dae29f4",
+      "title": "Agradecimento final",
+      "blocks": [
+        {
+          "id": "01a19f31-dbb6-71e5-b1e5-7cca32ee6dfd",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "body": "Ok, entendemos que não possa falar agora.\n\nPor favor, nos retorne por aqui assim que possível. É preciso confirmar só alguns dados para poder validar seu novo plano da Vivo.\n\nObrigado(a)! 😉",
+            "action": "Enviar texto",
+            "channel": "{{channel}}"
+          }
+        },
+        {
+          "id": "01a19f32-69ce-73ff-b40f-916162121153",
+          "type": "endSession",
+          "options": {}
+        }
+      ],
+      "graphCoordinates": {
+        "x": 499,
+        "y": 319
+      }
+    },
+    {
+      "id": "01a19f31-e7b1-7083-a951-a8a4293ae90f",
+      "title": "Fora do horário de atendimento",
+      "blocks": [
+        {
+          "id": "01a19f31-e7b1-7083-a951-a40b46275cfc",
+          "type": "journeyEvent",
+          "options": {
+            "payload": [],
+            "eventName": "Fora Horario Atendimento"
+          }
+        },
+        {
+          "id": "01a19f32-759f-76f9-8ef9-4774f2c5cd81",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "body": "Olá! O horário de atendimento com nossos especialistas é de segunda a sábado, das 09h às 21h. Aos domingos não temos expediente.\n\nObrigado! 💜",
+            "action": "Enviar texto",
+            "channel": "{{channel}}"
+          }
+        },
+        {
+          "id": "01a19f32-9d95-74bc-9b46-51317ae43f9c",
+          "type": "endSession",
+          "options": {}
+        }
+      ],
+      "graphCoordinates": {
+        "x": 813,
+        "y": 161
+      }
+    }
+  ],
+  "events": [
+    {
+      "id": "01a19f31-7178-707b-b2d5-8b1075722b1b",
+      "type": "start",
+      "outgoingEdgeId": "01a19f31-ac71-776b-9155-ce253b7c87ae",
+      "graphCoordinates": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ],
+  "variables": [
+    {
+      "id": "session_id",
+      "name": "session_id",
+      "isSessionVariable": true
+    },
+    {
+      "id": "init_date_time",
+      "name": "init_date_time",
+      "isSessionVariable": true
+    },
+    {
+      "id": "current_flow",
+      "name": "current_flow",
+      "isSessionVariable": true
+    },
+    {
+      "id": "current_flow_name",
+      "name": "current_flow_name",
+      "isSessionVariable": true
+    },
+    {
+      "id": "current_block",
+      "name": "current_block",
+      "isSessionVariable": true
+    },
+    {
+      "id": "current_group",
+      "name": "current_group",
+      "isSessionVariable": true
+    },
+    {
+      "id": "last_message",
+      "name": "last_message",
+      "isSessionVariable": true
+    },
+    {
+      "id": "media",
+      "name": "media",
+      "isSessionVariable": true
+    },
+    {
+      "id": "api_response",
+      "name": "api_response",
+      "isSessionVariable": true
+    },
+    {
+      "id": "api_status",
+      "name": "api_status",
+      "isSessionVariable": true
+    },
+    {
+      "id": "api_ok",
+      "name": "api_ok",
+      "isSessionVariable": true
+    },
+    {
+      "id": "api_debug",
+      "name": "api_debug",
+      "isSessionVariable": true
+    },
+    {
+      "id": "flow_response",
+      "name": "flow_response",
+      "isSessionVariable": true
+    },
+    {
+      "id": "channel",
+      "name": "channel",
+      "isSessionVariable": true
+    },
+    {
+      "id": "channel_phone",
+      "name": "channel_phone",
+      "isSessionVariable": true
+    },
+    {
+      "id": "wa_id",
+      "name": "wa_id",
+      "isSessionVariable": true
+    },
+    {
+      "id": "user_name",
+      "name": "user_name",
+      "isSessionVariable": true
+    },
+    {
+      "id": "user_id",
+      "name": "user_id",
+      "isSessionVariable": true
+    },
+    {
+      "id": "initial_channel",
+      "name": "initial_channel",
+      "isSessionVariable": true
+    },
+    {
+      "id": "initial_message",
+      "name": "initial_message",
+      "isSessionVariable": true
+    },
+    {
+      "id": "template_name",
+      "name": "template_name",
+      "isSessionVariable": true
+    },
+    {
+      "id": "session_origin",
+      "name": "session_origin",
+      "isSessionVariable": true
+    },
+    {
+      "id": "last_followup",
+      "name": "last_followup",
+      "isSessionVariable": true
+    },
+    {
+      "id": "last_intent",
+      "name": "last_intent",
+      "isSessionVariable": true
+    },
+    {
+      "id": "last_sentiment",
+      "name": "last_sentiment",
+      "isSessionVariable": true
+    },
+    {
+      "id": "last_offensive",
+      "name": "last_offensive",
+      "isSessionVariable": true
+    },
+    {
+      "id": "last_entities",
+      "name": "last_entities",
+      "isSessionVariable": true
+    }
+  ],
+  "edges": [
+    {
+      "id": "01a19f31-ac71-776b-9155-ce253b7c87ae",
+      "to": {
+        "groupId": "01a19f31-7b19-77fb-8266-f647035c5433"
+      },
+      "from": {
+        "eventId": "01a19f31-7178-707b-b2d5-8b1075722b1b"
+      }
+    },
+    {
+      "id": "01a19f33-2bd8-716b-a727-4abaf854ae4e",
+      "to": {
+        "groupId": "01a19f31-d1f2-72fc-83f8-80365501f463"
+      },
+      "from": {
+        "itemId": "b1",
+        "blockId": "01a19f31-7b19-77fb-8266-f33f52e62fc3"
+      }
+    },
+    {
+      "id": "01a19f33-2dbb-73bc-a5c4-47e1e2c921e7",
+      "to": {
+        "groupId": "01a19f31-dbb6-71e5-b1e5-80ee5dae29f4"
+      },
+      "from": {
+        "itemId": "b2",
+        "blockId": "01a19f31-7b19-77fb-8266-f33f52e62fc3"
+      }
+    },
+    {
+      "id": "01a19f33-2f9f-70c9-b751-e677b60546b6",
+      "to": {
+        "groupId": "01a19f31-e7b1-7083-a951-a8a4293ae90f"
+      },
+      "from": {
+        "blockId": "01a19f32-5dfc-77af-a65f-290445f6df58"
+      }
+    }
+  ],
+  "publicId": null,
+  "organizationId": "74d6acdf-822d-417d-a8d4-6a0f9e6b8c17",
+  "isArchived": false,
+  "isClosed": false
+}

@@ -1,0 +1,364 @@
+{
+  "id": "01a19f60-0834-708e-b72a-e8fe0401afbc",
+  "createdAt": "2026-11-03T03:07:13.332Z",
+  "updatedAt": "2026-11-03T03:09:10.037Z",
+  "name": "Vivo Fixa Dados - CPF (manual)",
+  "folderId": "01a189b0-3019-71fb-b065-89267955ddd3",
+  "groups": [
+    {
+      "id": "01a19f60-1261-73ff-89ba-8e4bc01d6129",
+      "title": "Pede CPF",
+      "blocks": [
+        {
+          "id": "01a19f60-1261-73ff-89ba-8bf64e0fb36e",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "body": "Perfeito! Informe, por gentileza, seu *CPF* completo (11 dígitos).\n\nExemplo: 123.456.789-09",
+            "action": "Enviar texto",
+            "channel": "{{channel}}",
+            "awaitReply": true
+          },
+          "outgoingEdgeId": "01a19f61-9827-77ed-aec7-868f1595998b"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 261.50665771484364,
+        "y": -353.29334228515614
+      }
+    },
+    {
+      "id": "01a19f60-1c24-77aa-9c2b-1130ff90fb0d",
+      "title": "Valida CPF",
+      "blocks": [
+        {
+          "id": "01a19f60-1c24-77aa-9c2b-043203af6caa",
+          "type": "Condition",
+          "items": [
+            {
+              "id": "01a19f60-1c24-77aa-9c2b-0a1c31664f4d",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "01a19f60-1c24-77aa-9c2b-0e4e46fbc0ff",
+                    "value": "^\\D*(\\d\\D*){11}$",
+                    "variableId": "last_message",
+                    "comparisonOperator": "Matches regex"
+                  }
+                ]
+              },
+              "outgoingEdgeId": "01a19f61-9a0a-721e-8d02-e9741e631c54"
+            }
+          ],
+          "outgoingEdgeId": "01a19f61-9bee-77ca-bdab-d4db010e0344"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 681.9866577148435,
+        "y": -353.29334228515614
+      }
+    },
+    {
+      "id": "01a19f60-25ea-75f6-8a8d-c6c417f813ed",
+      "title": "CPF inválido",
+      "blocks": [
+        {
+          "id": "01a19f60-25ea-75f6-8a8d-c3de6f71866b",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "body": "O CPF foi digitado errado, ou está inválido. ❌\n\nPode digitar sem pontos que eu entendo. 😉\n\nLembre-se, o *CPF* tem 11 dígitos. Me informe novamente.",
+            "action": "Enviar texto",
+            "channel": "{{channel}}",
+            "awaitReply": true
+          },
+          "outgoingEdgeId": "01a19f61-9dd1-75d6-8c58-1dd31db6871a"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 681.9866577148435,
+        "y": 116.14665771484381
+      }
+    },
+    {
+      "id": "01a19f60-2fac-77cd-be06-392c49261a9b",
+      "title": "Erro ao consultar dados pessoais",
+      "blocks": [
+        {
+          "id": "01a19f60-2fac-77cd-be06-356c301e42c1",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "body": "Hmm, aconteceu algum erro ao validar seus dados.\n\nPor favor digite de novo as informações a seguir:",
+            "action": "Enviar texto",
+            "channel": "{{channel}}"
+          },
+          "outgoingEdgeId": "01a19f61-a198-739c-81de-190f0b5a0676"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1135.5866577148436,
+        "y": 116.14665771484381
+      }
+    },
+    {
+      "id": "01a19f60-3bb7-755b-bdfb-de29a3caf3b5",
+      "title": "Consulta CPF na API",
+      "blocks": [
+        {
+          "id": "01a19f60-3bb7-755b-bdfb-da962b878117",
+          "type": "Webhook",
+          "options": {
+            "webhook": {
+              "url": "{{resource.blip.vivofixadados.apiHub}}/CPF/{{last_message}}",
+              "method": "GET",
+              "headers": []
+            }
+          }
+        },
+        {
+          "id": "01a19f60-7719-774a-9679-34d071a08730",
+          "type": "Condition",
+          "items": [
+            {
+              "id": "01a19f60-7719-774a-9679-38dd5ceabd5e",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "01a19f60-7719-774a-9679-3e1db942bf94",
+                    "value": "true",
+                    "variableId": "api_ok",
+                    "comparisonOperator": "Equal to"
+                  }
+                ]
+              }
+            }
+          ],
+          "outgoingEdgeId": "01a19f61-9fb5-75fa-a073-8a382cddc163"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1135.5866577148436,
+        "y": -353.29334228515614
+      }
+    }
+  ],
+  "events": [
+    {
+      "id": "01a19f60-0834-708e-b72a-ed62620f472e",
+      "type": "start",
+      "outgoingEdgeId": "01a19f61-9643-721c-bc0e-d014f510cce0",
+      "graphCoordinates": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ],
+  "variables": [
+    {
+      "id": "session_id",
+      "name": "session_id",
+      "isSessionVariable": true
+    },
+    {
+      "id": "init_date_time",
+      "name": "init_date_time",
+      "isSessionVariable": true
+    },
+    {
+      "id": "current_flow",
+      "name": "current_flow",
+      "isSessionVariable": true
+    },
+    {
+      "id": "current_flow_name",
+      "name": "current_flow_name",
+      "isSessionVariable": true
+    },
+    {
+      "id": "current_block",
+      "name": "current_block",
+      "isSessionVariable": true
+    },
+    {
+      "id": "current_group",
+      "name": "current_group",
+      "isSessionVariable": true
+    },
+    {
+      "id": "last_message",
+      "name": "last_message",
+      "isSessionVariable": true
+    },
+    {
+      "id": "media",
+      "name": "media",
+      "isSessionVariable": true
+    },
+    {
+      "id": "api_response",
+      "name": "api_response",
+      "isSessionVariable": true
+    },
+    {
+      "id": "api_status",
+      "name": "api_status",
+      "isSessionVariable": true
+    },
+    {
+      "id": "api_ok",
+      "name": "api_ok",
+      "isSessionVariable": true
+    },
+    {
+      "id": "api_debug",
+      "name": "api_debug",
+      "isSessionVariable": true
+    },
+    {
+      "id": "flow_response",
+      "name": "flow_response",
+      "isSessionVariable": true
+    },
+    {
+      "id": "channel",
+      "name": "channel",
+      "isSessionVariable": true
+    },
+    {
+      "id": "channel_phone",
+      "name": "channel_phone",
+      "isSessionVariable": true
+    },
+    {
+      "id": "wa_id",
+      "name": "wa_id",
+      "isSessionVariable": true
+    },
+    {
+      "id": "user_name",
+      "name": "user_name",
+      "isSessionVariable": true
+    },
+    {
+      "id": "user_id",
+      "name": "user_id",
+      "isSessionVariable": true
+    },
+    {
+      "id": "initial_channel",
+      "name": "initial_channel",
+      "isSessionVariable": true
+    },
+    {
+      "id": "initial_message",
+      "name": "initial_message",
+      "isSessionVariable": true
+    },
+    {
+      "id": "template_name",
+      "name": "template_name",
+      "isSessionVariable": true
+    },
+    {
+      "id": "session_origin",
+      "name": "session_origin",
+      "isSessionVariable": true
+    },
+    {
+      "id": "last_followup",
+      "name": "last_followup",
+      "isSessionVariable": true
+    },
+    {
+      "id": "last_intent",
+      "name": "last_intent",
+      "isSessionVariable": true
+    },
+    {
+      "id": "last_sentiment",
+      "name": "last_sentiment",
+      "isSessionVariable": true
+    },
+    {
+      "id": "last_offensive",
+      "name": "last_offensive",
+      "isSessionVariable": true
+    },
+    {
+      "id": "last_entities",
+      "name": "last_entities",
+      "isSessionVariable": true
+    }
+  ],
+  "edges": [
+    {
+      "id": "01a19f61-9643-721c-bc0e-d014f510cce0",
+      "to": {
+        "groupId": "01a19f60-1261-73ff-89ba-8e4bc01d6129"
+      },
+      "from": {
+        "eventId": "01a19f60-0834-708e-b72a-ed62620f472e"
+      }
+    },
+    {
+      "id": "01a19f61-9827-77ed-aec7-868f1595998b",
+      "to": {
+        "groupId": "01a19f60-1c24-77aa-9c2b-1130ff90fb0d"
+      },
+      "from": {
+        "blockId": "01a19f60-1261-73ff-89ba-8bf64e0fb36e"
+      }
+    },
+    {
+      "id": "01a19f61-9a0a-721e-8d02-e9741e631c54",
+      "to": {
+        "groupId": "01a19f60-3bb7-755b-bdfb-de29a3caf3b5"
+      },
+      "from": {
+        "itemId": "01a19f60-1c24-77aa-9c2b-0a1c31664f4d",
+        "blockId": "01a19f60-1c24-77aa-9c2b-043203af6caa"
+      }
+    },
+    {
+      "id": "01a19f61-9bee-77ca-bdab-d4db010e0344",
+      "to": {
+        "groupId": "01a19f60-25ea-75f6-8a8d-c6c417f813ed"
+      },
+      "from": {
+        "blockId": "01a19f60-1c24-77aa-9c2b-043203af6caa"
+      }
+    },
+    {
+      "id": "01a19f61-9dd1-75d6-8c58-1dd31db6871a",
+      "to": {
+        "groupId": "01a19f60-1c24-77aa-9c2b-1130ff90fb0d"
+      },
+      "from": {
+        "blockId": "01a19f60-25ea-75f6-8a8d-c3de6f71866b"
+      }
+    },
+    {
+      "id": "01a19f61-9fb5-75fa-a073-8a382cddc163",
+      "to": {
+        "groupId": "01a19f60-2fac-77cd-be06-392c49261a9b"
+      },
+      "from": {
+        "blockId": "01a19f60-7719-774a-9679-34d071a08730"
+      }
+    },
+    {
+      "id": "01a19f61-a198-739c-81de-190f0b5a0676",
+      "to": {
+        "groupId": "01a19f60-1261-73ff-89ba-8e4bc01d6129"
+      },
+      "from": {
+        "blockId": "01a19f60-2fac-77cd-be06-356c301e42c1"
+      }
+    }
+  ],
+  "publicId": null,
+  "organizationId": "74d6acdf-822d-417d-a8d4-6a0f9e6b8c17",
+  "isArchived": false,
+  "isClosed": false
+}

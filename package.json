@@ -1,0 +1,31 @@
+{
+  "name": "blip-kayros-converter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Conversor offline Blip -> Kayros (perfil kayros-current-adapted). Gera JSONs e relatorio; nao instala, publica nem associa numero.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "analyze": "tsx src/cli.ts analyze",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "check": "tsc --noEmit && vitest run",
+    "convert": "tsx src/cli.ts convert",
+    "verify": "tsx src/cli.ts verify",
+    "report": "tsx src/cli.ts report"
+  },
+  "dependencies": {
+    "7z-wasm": "1.2.0",
+    "acorn": "8.19.0",
+    "lossless-json": "4.3.3",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.6",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vitest": "5.1.0"
+  }
+}

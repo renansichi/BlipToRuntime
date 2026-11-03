@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "2.0",
+  "note": "Preencher depois de importar (F3-08). O importador regenera todos os ids.",
+  "rows": [
+    {
+      "logicalBot": "vivofixadados",
+      "variant": null,
+      "generatedFile": "flows/kayros-current-adapted/vivofixadados.json",
+      "importedBotId": null,
+      "publicId": null,
+      "exportAfterImportFile": null,
+      "status": "not_imported"
+    },
+    {
+      "logicalBot": "vivofixadados",
+      "variant": "teste-cpf",
+      "generatedFile": "flows/kayros-current-adapted/vivofixadados.teste-cpf.json",
+      "importedBotId": null,
+      "publicId": null,
+      "exportAfterImportFile": null,
+      "status": "not_imported"
+    },
+    {
+      "logicalBot": "vivofixadados",
+      "variant": "teste-abandono-cpf",
+      "generatedFile": "flows/kayros-current-adapted/vivofixadados.teste-abandono-cpf.json",
+      "importedBotId": null,
+      "publicId": null,
+      "exportAfterImportFile": null,
+      "status": "not_imported"
+    },
+    {
+      "logicalBot": "vivofixadados",
+      "variant": "teste-flows-email-cpf-e-vencimento",
+      "generatedFile": "flows/kayros-current-adapted/vivofixadados.teste-flows-email-cpf-e-vencimento.json",
+      "importedBotId": null,
+      "publicId": null,
+      "exportAfterImportFile": null,
+      "status": "not_imported"
+    },
+    {
+      "logicalBot": "vivofixadados",
+      "variant": "teste-cpf.enxuto",
+      "generatedFile": "flows/kayros-current-adapted/vivofixadados.teste-cpf.enxuto.json",
+      "importedBotId": null,
+      "publicId": null,
+      "exportAfterImportFile": null,
+      "status": "not_imported"
+    },
+    {
+      "logicalBot": "vivofixadados",
+      "variant": "teste-abandono-cpf.enxuto",
+      "generatedFile": "flows/kayros-current-adapted/vivofixadados.teste-abandono-cpf.enxuto.json",
+      "importedBotId": null,
+      "publicId": null,
+      "exportAfterImportFile": null,
+      "status": "not_imported"
+    },
+    {
+      "logicalBot": "vivofixadados",
+      "variant": "teste-flows-email-cpf-e-vencimento.enxuto",
+      "generatedFile": "flows/kayros-current-adapted/vivofixadados.teste-flows-email-cpf-e-vencimento.enxuto.json",
+      "importedBotId": null,
+      "publicId": null,
+      "exportAfterImportFile": null,
+      "status": "not_imported"
+    }
+  ]
+}

@@ -1,0 +1,535 @@
+{
+  "id": "01a19f35-90e0-77c4-b161-5b12a3fb5c4d",
+  "createdAt": "2026-11-03T02:20:50.272Z",
+  "updatedAt": "2026-11-03T02:24:15.756Z",
+  "name": "Vivo ITV Planos - Fechamento do pedido (manual)",
+  "folderId": "01a189b0-3019-71fb-b065-89267955ddd3",
+  "groups": [
+    {
+      "id": "01a19f36-1026-7440-97b3-db32c5df4e30",
+      "title": "Confirma resumo do pedido",
+      "blocks": [
+        {
+          "id": "01a19f36-1026-7440-97b3-d7ad22e167ce",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "action": "Enviar botões",
+            "buttons": [
+              {
+                "id": "b1",
+                "title": "Correto ✅",
+                "examples": [
+                  "certo",
+                  "correto",
+                  "isso",
+                  "sim",
+                  "yes"
+                ],
+                "outgoingEdgeId": "01a19f38-3c87-71ad-b0cc-a80a0263d26d"
+              },
+              {
+                "id": "b2",
+                "title": "Errado ❌",
+                "examples": [
+                  "errado",
+                  "não",
+                  "nao",
+                  "incorreto",
+                  "erro"
+                ],
+                "outgoingEdgeId": "01a19f38-3e6a-70fd-8c3d-bf6fe9b5b1d3"
+              }
+            ],
+            "channel": "{{channel}}",
+            "bodyText": "Esse é o resumo do seu pedido.\n\nEstá tudo correto?\n\nPlano: {{planName}} por {{price}}/mês",
+            "awaitReply": true,
+            "understandTypedReply": true
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 261.50665771484364,
+        "y": -353.29334228515614
+      }
+    },
+    {
+      "id": "01a19f36-19eb-73dc-b2a2-05747f33f166",
+      "title": "Aceite dos termos",
+      "blocks": [
+        {
+          "id": "01a19f36-19eb-73dc-b2a2-021eb17d5757",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "action": "Enviar botões",
+            "buttons": [
+              {
+                "id": "b1",
+                "title": "Aceito ✅",
+                "examples": [
+                  "aceito",
+                  "ok",
+                  "sim",
+                  "concordo"
+                ],
+                "outgoingEdgeId": "01a19f38-404d-73e6-8835-73f5183b7828"
+              },
+              {
+                "id": "b2",
+                "title": "Discordo ❌",
+                "examples": [
+                  "não",
+                  "nao",
+                  "discordo"
+                ],
+                "outgoingEdgeId": "01a19f38-4231-732b-a025-e37c44627877"
+              }
+            ],
+            "channel": "{{channel}}",
+            "bodyText": "Para confirmar a sua assinatura, confira e aceite os termos abaixo: 📃\n\nLeia aqui: {{termo}}",
+            "awaitReply": true,
+            "understandTypedReply": true
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 681.9866577148435,
+        "y": -353.29334228515614
+      }
+    },
+    {
+      "id": "01a19f36-23ad-7118-a898-29dfca541df3",
+      "title": "Termos recusados",
+      "blocks": [
+        {
+          "id": "01a19f36-23ad-7118-a898-27f73b22eb13",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "action": "Enviar botões",
+            "buttons": [
+              {
+                "id": "b1",
+                "title": "Aceito ✅",
+                "examples": [
+                  "sim",
+                  "aceito",
+                  "ok",
+                  "concordo"
+                ],
+                "outgoingEdgeId": "01a19f38-4414-7584-970e-581a34b993ee"
+              },
+              {
+                "id": "b2",
+                "title": "Não ❌",
+                "examples": [
+                  "não",
+                  "nao",
+                  "cancela",
+                  "discordo"
+                ],
+                "outgoingEdgeId": "01a19f38-45f7-71e1-8dc6-0a418a33e0d4"
+              }
+            ],
+            "channel": "{{channel}}",
+            "bodyText": "Sem aceitar os Termos e Condições, não podemos finalizar sua compra.\n\nDeseja ler novamente?",
+            "awaitReply": true,
+            "understandTypedReply": true
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 681.9866577148435,
+        "y": 51.346657714843815
+      }
+    },
+    {
+      "id": "01a19f36-2d71-7640-bc96-58721ccf50e9",
+      "title": "Pedido realizado",
+      "blocks": [
+        {
+          "id": "01a19f36-2d71-7640-bc96-5480c5891dbc",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "body": "Recebemos o seu pedido, o número dele é: {{idPedido}}!\n\nEm breve você receberá a confirmação da sua compra por aqui mesmo!\n\nObrigado por escolher a Vivo. 💜",
+            "action": "Enviar texto",
+            "channel": "{{channel}}"
+          }
+        },
+        {
+          "id": "01a19f36-9aec-743d-b646-5a24e5b673c5",
+          "type": "endSession",
+          "options": {}
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1135.5866577148436,
+        "y": 51.346657714843815
+      }
+    },
+    {
+      "id": "01a19f36-3735-73bb-98f7-67bdd5e17e4a",
+      "title": "Erro ao concluir pedido",
+      "blocks": [
+        {
+          "id": "01a19f36-3735-73bb-98f7-63d681ac9248",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "body": "Desculpe, não conseguimos concluir o seu pedido agora. Por favor, tente novamente em alguns instantes.",
+            "action": "Enviar texto",
+            "channel": "{{channel}}"
+          }
+        },
+        {
+          "id": "01a19f36-a6ba-701a-b2a0-f26ba514de58",
+          "type": "endSession",
+          "options": {}
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1135.5866577148436,
+        "y": 408.4666577148438
+      }
+    },
+    {
+      "id": "01a19f36-40e9-736a-b7e3-b338ac4dab0c",
+      "title": "Agradecimento final",
+      "blocks": [
+        {
+          "id": "01a19f36-40e9-736a-b7e3-af4813c9ff4d",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "body": "Agradecemos seu contato.\n\nMuito obrigado!",
+            "action": "Enviar texto",
+            "channel": "{{channel}}"
+          }
+        },
+        {
+          "id": "01a19f36-b291-70ac-b80d-411ff5062e4d",
+          "type": "endSession",
+          "options": {}
+        }
+      ],
+      "graphCoordinates": {
+        "x": 681.9866577148435,
+        "y": 408.4666577148438
+      }
+    },
+    {
+      "id": "01a19f36-5ca4-712d-8192-8f8edec87294",
+      "title": "Conclui pedido na API",
+      "blocks": [
+        {
+          "id": "01a19f36-5ca4-712d-8192-8b2970b1cced",
+          "type": "Webhook",
+          "options": {
+            "webhook": {
+              "url": "{{resource.blip.vivoitvplanos.apiurl}}",
+              "body": "{\"acao\": \"concluido\", \"plano\": \"{{planName}}\", \"preco\": \"{{price}}\", \"telefone\": \"{{wa_id}}\"}",
+              "method": "POST",
+              "headers": []
+            },
+            "responseVariableMapping": [
+              {
+                "id": "01a19f37-0718-766b-8da2-23f3ace1d79c",
+                "bodyPath": "data.idPedido",
+                "variableId": "01a19f35-e6af-75a3-8eb6-b48406d89e3e"
+              }
+            ]
+          }
+        },
+        {
+          "id": "01a19f36-8f17-7588-9977-7cda962049c2",
+          "type": "Condition",
+          "items": [
+            {
+              "id": "01a19f36-8f17-7588-9977-83cc1a90629b",
+              "content": {
+                "comparisons": [
+                  {
+                    "id": "01a19f36-8f17-7588-9977-86b19bb47991",
+                    "value": "true",
+                    "variableId": "api_ok",
+                    "comparisonOperator": "Equal to"
+                  }
+                ]
+              },
+              "outgoingEdgeId": "01a19f38-47db-729e-91ae-8a3e4eed9ea4"
+            }
+          ],
+          "outgoingEdgeId": "01a19f38-49bf-7709-a3e1-a7a766e7ee45"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1135.5866577148436,
+        "y": -353.29334228515614
+      }
+    }
+  ],
+  "events": [
+    {
+      "id": "01a19f35-90e0-77c4-b161-5fbbb2c8a967",
+      "type": "start",
+      "outgoingEdgeId": "01a19f38-3aa3-7283-a5bf-8dd537e8963f",
+      "graphCoordinates": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ],
+  "variables": [
+    {
+      "id": "session_id",
+      "name": "session_id",
+      "isSessionVariable": true
+    },
+    {
+      "id": "init_date_time",
+      "name": "init_date_time",
+      "isSessionVariable": true
+    },
+    {
+      "id": "current_flow",
+      "name": "current_flow",
+      "isSessionVariable": true
+    },
+    {
+      "id": "current_flow_name",
+      "name": "current_flow_name",
+      "isSessionVariable": true
+    },
+    {
+      "id": "current_block",
+      "name": "current_block",
+      "isSessionVariable": true
+    },
+    {
+      "id": "current_group",
+      "name": "current_group",
+      "isSessionVariable": true
+    },
+    {
+      "id": "last_message",
+      "name": "last_message",
+      "isSessionVariable": true
+    },
+    {
+      "id": "media",
+      "name": "media",
+      "isSessionVariable": true
+    },
+    {
+      "id": "api_response",
+      "name": "api_response",
+      "isSessionVariable": true
+    },
+    {
+      "id": "api_status",
+      "name": "api_status",
+      "isSessionVariable": true
+    },
+    {
+      "id": "api_ok",
+      "name": "api_ok",
+      "isSessionVariable": true
+    },
+    {
+      "id": "api_debug",
+      "name": "api_debug",
+      "isSessionVariable": true
+    },
+    {
+      "id": "flow_response",
+      "name": "flow_response",
+      "isSessionVariable": true
+    },
+    {
+      "id": "channel",
+      "name": "channel",
+      "isSessionVariable": true
+    },
+    {
+      "id": "channel_phone",
+      "name": "channel_phone",
+      "isSessionVariable": true
+    },
+    {
+      "id": "wa_id",
+      "name": "wa_id",
+      "isSessionVariable": true
+    },
+    {
+      "id": "user_name",
+      "name": "user_name",
+      "isSessionVariable": true
+    },
+    {
+      "id": "user_id",
+      "name": "user_id",
+      "isSessionVariable": true
+    },
+    {
+      "id": "initial_channel",
+      "name": "initial_channel",
+      "isSessionVariable": true
+    },
+    {
+      "id": "initial_message",
+      "name": "initial_message",
+      "isSessionVariable": true
+    },
+    {
+      "id": "template_name",
+      "name": "template_name",
+      "isSessionVariable": true
+    },
+    {
+      "id": "session_origin",
+      "name": "session_origin",
+      "isSessionVariable": true
+    },
+    {
+      "id": "last_followup",
+      "name": "last_followup",
+      "isSessionVariable": true
+    },
+    {
+      "id": "last_intent",
+      "name": "last_intent",
+      "isSessionVariable": true
+    },
+    {
+      "id": "last_sentiment",
+      "name": "last_sentiment",
+      "isSessionVariable": true
+    },
+    {
+      "id": "last_offensive",
+      "name": "last_offensive",
+      "isSessionVariable": true
+    },
+    {
+      "id": "last_entities",
+      "name": "last_entities",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f35-c57a-7029-b1a7-2947e785e813",
+      "name": "planName",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f35-ddff-7512-8bac-be030d246c86",
+      "name": "price",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f35-e260-733c-a9b5-48ba397c0bac",
+      "name": "termo",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f35-e6af-75a3-8eb6-b48406d89e3e",
+      "name": "idPedido",
+      "isSessionVariable": false
+    }
+  ],
+  "edges": [
+    {
+      "id": "01a19f38-3aa3-7283-a5bf-8dd537e8963f",
+      "to": {
+        "groupId": "01a19f36-1026-7440-97b3-db32c5df4e30"
+      },
+      "from": {
+        "eventId": "01a19f35-90e0-77c4-b161-5fbbb2c8a967"
+      }
+    },
+    {
+      "id": "01a19f38-3c87-71ad-b0cc-a80a0263d26d",
+      "to": {
+        "groupId": "01a19f36-19eb-73dc-b2a2-05747f33f166"
+      },
+      "from": {
+        "itemId": "b1",
+        "blockId": "01a19f36-1026-7440-97b3-d7ad22e167ce"
+      }
+    },
+    {
+      "id": "01a19f38-3e6a-70fd-8c3d-bf6fe9b5b1d3",
+      "to": {
+        "groupId": "01a19f36-40e9-736a-b7e3-b338ac4dab0c"
+      },
+      "from": {
+        "itemId": "b2",
+        "blockId": "01a19f36-1026-7440-97b3-d7ad22e167ce"
+      }
+    },
+    {
+      "id": "01a19f38-404d-73e6-8835-73f5183b7828",
+      "to": {
+        "groupId": "01a19f36-5ca4-712d-8192-8f8edec87294"
+      },
+      "from": {
+        "itemId": "b1",
+        "blockId": "01a19f36-19eb-73dc-b2a2-021eb17d5757"
+      }
+    },
+    {
+      "id": "01a19f38-4231-732b-a025-e37c44627877",
+      "to": {
+        "groupId": "01a19f36-23ad-7118-a898-29dfca541df3"
+      },
+      "from": {
+        "itemId": "b2",
+        "blockId": "01a19f36-19eb-73dc-b2a2-021eb17d5757"
+      }
+    },
+    {
+      "id": "01a19f38-4414-7584-970e-581a34b993ee",
+      "to": {
+        "groupId": "01a19f36-19eb-73dc-b2a2-05747f33f166"
+      },
+      "from": {
+        "itemId": "b1",
+        "blockId": "01a19f36-23ad-7118-a898-27f73b22eb13"
+      }
+    },
+    {
+      "id": "01a19f38-45f7-71e1-8dc6-0a418a33e0d4",
+      "to": {
+        "groupId": "01a19f36-40e9-736a-b7e3-b338ac4dab0c"
+      },
+      "from": {
+        "itemId": "b2",
+        "blockId": "01a19f36-23ad-7118-a898-27f73b22eb13"
+      }
+    },
+    {
+      "id": "01a19f38-47db-729e-91ae-8a3e4eed9ea4",
+      "to": {
+        "groupId": "01a19f36-2d71-7640-bc96-58721ccf50e9"
+      },
+      "from": {
+        "itemId": "01a19f36-8f17-7588-9977-83cc1a90629b",
+        "blockId": "01a19f36-8f17-7588-9977-7cda962049c2"
+      }
+    },
+    {
+      "id": "01a19f38-49bf-7709-a3e1-a7a766e7ee45",
+      "to": {
+        "groupId": "01a19f36-3735-73bb-98f7-67bdd5e17e4a"
+      },
+      "from": {
+        "blockId": "01a19f36-8f17-7588-9977-7cda962049c2"
+      }
+    }
+  ],
+  "publicId": null,
+  "organizationId": "74d6acdf-822d-417d-a8d4-6a0f9e6b8c17",
+  "isArchived": false,
+  "isClosed": false
+}

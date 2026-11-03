@@ -1,0 +1,172 @@
+{
+  "schemaVersion": "2.0",
+  "limits": {
+    "maxOutboundPerPass": 15,
+    "maxExternalCallsPerPass": 30,
+    "passDeadlineMs": 25000,
+    "maxBotHopsPerPass": 50
+  },
+  "note": "Pior caminho de cada passada (entre suspensoes) no fluxo emitido. Ramos exclusivos nao se somam. Ciclos sem suspensao sao cortados na contagem.",
+  "perBot": [
+    {
+      "bot": "vivofixadados",
+      "passes": 58,
+      "maxOutbound": 6,
+      "maxExternalCalls": 11,
+      "cycles": 50,
+      "exceeding": [],
+      "heaviest": [
+        {
+          "start": "apos aguardar resposta em \"Flows Agendamento Novo\"",
+          "outbound": 6,
+          "externalCalls": 11,
+          "cycle": true
+        },
+        {
+          "start": "apos aguardar resposta em \"Flows Agendamento · continuacao\"",
+          "outbound": 6,
+          "externalCalls": 11,
+          "cycle": true
+        },
+        {
+          "start": "apos aguardar resposta em \"Nome Completo\"",
+          "outbound": 4,
+          "externalCalls": 11,
+          "cycle": true
+        },
+        {
+          "start": "apos aguardar resposta em \"Nome Mae\"",
+          "outbound": 4,
+          "externalCalls": 11,
+          "cycle": true
+        },
+        {
+          "start": "apos aguardar resposta em \"Abandonado 1 final\"",
+          "outbound": 4,
+          "externalCalls": 11,
+          "cycle": true
+        }
+      ]
+    },
+    {
+      "bot": "vivofixadados",
+      "passes": 58,
+      "maxOutbound": 5,
+      "maxExternalCalls": 11,
+      "cycles": 49,
+      "exceeding": [],
+      "heaviest": [
+        {
+          "start": "apos aguardar resposta em \"Nome Completo\"",
+          "outbound": 5,
+          "externalCalls": 11,
+          "cycle": true
+        },
+        {
+          "start": "apos aguardar resposta em \"Nome Mae\"",
+          "outbound": 5,
+          "externalCalls": 11,
+          "cycle": true
+        },
+        {
+          "start": "apos aguardar resposta em \"Abandonado 1 final\"",
+          "outbound": 5,
+          "externalCalls": 11,
+          "cycle": true
+        },
+        {
+          "start": "apos aguardar resposta em \"Dados pessoais  Flows\"",
+          "outbound": 5,
+          "externalCalls": 11,
+          "cycle": true
+        },
+        {
+          "start": "apos aguardar resposta em \"Flows Agendamento Novo\"",
+          "outbound": 5,
+          "externalCalls": 11,
+          "cycle": true
+        }
+      ]
+    },
+    {
+      "bot": "vivofixadados",
+      "passes": 58,
+      "maxOutbound": 5,
+      "maxExternalCalls": 11,
+      "cycles": 49,
+      "exceeding": [],
+      "heaviest": [
+        {
+          "start": "apos aguardar resposta em \"Nome Completo\"",
+          "outbound": 5,
+          "externalCalls": 11,
+          "cycle": true
+        },
+        {
+          "start": "apos aguardar resposta em \"Nome Mae\"",
+          "outbound": 5,
+          "externalCalls": 11,
+          "cycle": true
+        },
+        {
+          "start": "apos aguardar resposta em \"Abandonado 1 final\"",
+          "outbound": 5,
+          "externalCalls": 11,
+          "cycle": true
+        },
+        {
+          "start": "apos aguardar resposta em \"Dados pessoais  Flows\"",
+          "outbound": 5,
+          "externalCalls": 11,
+          "cycle": true
+        },
+        {
+          "start": "apos aguardar resposta em \"Flows Agendamento Novo\"",
+          "outbound": 5,
+          "externalCalls": 11,
+          "cycle": true
+        }
+      ]
+    },
+    {
+      "bot": "vivofixadados",
+      "passes": 58,
+      "maxOutbound": 5,
+      "maxExternalCalls": 11,
+      "cycles": 49,
+      "exceeding": [],
+      "heaviest": [
+        {
+          "start": "apos aguardar resposta em \"Nome Completo\"",
+          "outbound": 5,
+          "externalCalls": 11,
+          "cycle": true
+        },
+        {
+          "start": "apos aguardar resposta em \"Nome Mae\"",
+          "outbound": 5,
+          "externalCalls": 11,
+          "cycle": true
+        },
+        {
+          "start": "apos aguardar resposta em \"Abandonado 1 final\"",
+          "outbound": 5,
+          "externalCalls": 11,
+          "cycle": true
+        },
+        {
+          "start": "apos aguardar resposta em \"Dados pessoais  Flows\"",
+          "outbound": 5,
+          "externalCalls": 11,
+          "cycle": true
+        },
+        {
+          "start": "apos aguardar resposta em \"Flows Agendamento Novo\"",
+          "outbound": 5,
+          "externalCalls": 11,
+          "cycle": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,821 @@
+{
+  "schemaVersion": "2.0",
+  "note": "external: lidos e nunca escritos por bot algum do pacote (campanha/router/entrada precisam preenche-los). fromChain: escritos por outro bot da cadeia e herdados via Typebot link (variablesToPass).",
+  "perBot": [
+    {
+      "bot": "vivofixadados",
+      "external": [
+        {
+          "namespace": "contact.extras",
+          "name": "cid",
+          "readers": [
+            "vivofixadados"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "contact.extras",
+          "name": "comboSku",
+          "readers": [
+            "vivofixadados"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "contact.extras",
+          "name": "gclid",
+          "readers": [
+            "vivofixadados"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "contact.extras",
+          "name": "numResidencia",
+          "readers": [
+            "vivofixadados",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "contact.extras",
+          "name": "tecnologia",
+          "readers": [
+            "vivofixadados"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "contact.extras",
+          "name": "type",
+          "readers": [
+            "vivofixadados"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "contact.extras",
+          "name": "url",
+          "readers": [
+            "vivofixadados"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "contact.extras",
+          "name": "utmCampaign",
+          "readers": [
+            "vivofixadados",
+            "vivoiptveitvplanos",
+            "vivoiptvwpp",
+            "vivoitvplanos"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "contact.extras",
+          "name": "utmCampaign2",
+          "readers": [
+            "vivofixadados"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "contact.extras",
+          "name": "utmMedium",
+          "readers": [
+            "vivofixadados",
+            "vivoitvplanos",
+            "vivosegurocelular"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "contact.extras",
+          "name": "utmSource",
+          "readers": [
+            "vivofixadados",
+            "vivoiptveitvplanos",
+            "vivoiptvwpp",
+            "vivoitvplanos",
+            "vivosegurocelular"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "contact",
+          "name": "city",
+          "readers": [
+            "bkovivofixamsgativaah",
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptvwpp",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "contact",
+          "name": "email",
+          "readers": [
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptveitvplanos",
+            "vivoiptvwpp",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "contact",
+          "name": "identity",
+          "readers": [
+            "bkovivofixamsgativaah",
+            "fibrasubida17",
+            "vivofixaabandonomsgatah",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptveitvplanos",
+            "vivoiptvwpp",
+            "vivoitvah",
+            "vivoitvplanos",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "contact",
+          "name": "name",
+          "readers": [
+            "fibrasubida17",
+            "vivofixaabandonomsgatah",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptvwpp",
+            "vivoitvah",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "contact",
+          "name": "phoneNumber",
+          "readers": [
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptveitvplanos",
+            "vivoiptvwpp",
+            "vivoitvplanos",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "contact",
+          "name": "source",
+          "readers": [
+            "fibrasubida17",
+            "vivofixaabandonomsgatah",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptveitvplanos",
+            "vivoiptvwpp",
+            "vivoitvplanos",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "contact",
+          "name": "whatsAppBsuid",
+          "readers": [
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptvwpp",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "contact",
+          "name": "whatsAppWaId",
+          "readers": [
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptvwpp",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "context",
+          "name": "alteraNome",
+          "readers": [
+            "vivofixadados"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "context",
+          "name": "chatgptResponse",
+          "readers": [
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptveitvplanos",
+            "vivoiptvwpp",
+            "vivoitvplanos",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "context",
+          "name": "destiny",
+          "readers": [
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptvwpp",
+            "vivoitvplanos",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "context",
+          "name": "empresaAthena",
+          "readers": [
+            "vivofixadados",
+            "vivoiptvwpp",
+            "vivototaldados"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "context",
+          "name": "optin",
+          "readers": [
+            "vivofixadados",
+            "vivototaldados"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "context",
+          "name": "pontoReferencia",
+          "readers": [
+            "vivofixadados",
+            "vivototaldados"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "context",
+          "name": "random.guid",
+          "readers": [
+            "bkovivofixamsgativaah",
+            "fibrasubida17",
+            "vivofixaabandonomsgatah",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoitvah",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "context",
+          "name": "thread: string, skillResponse: string",
+          "readers": [
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptveitvplanos",
+            "vivoiptvwpp",
+            "vivoitvplanos",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "context",
+          "name": "vencimento",
+          "readers": [
+            "vivofixadados",
+            "vivototaldados"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "context",
+          "name": "wwresponsebody",
+          "readers": [
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptveitvplanos",
+            "vivoiptvwpp",
+            "vivoitvplanos",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": []
+        },
+        {
+          "namespace": "context",
+          "name": "wwsanitizedinput",
+          "readers": [
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptveitvplanos",
+            "vivoiptvwpp",
+            "vivoitvplanos",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": []
+        }
+      ],
+      "fromChain": [
+        {
+          "namespace": "contact.extras",
+          "name": "autoSku",
+          "readers": [
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptveitvplanos",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": [
+            "fibrasubida17",
+            "vivofixawhatsapp",
+            "vivoiptveitvplanos",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ]
+        },
+        {
+          "namespace": "contact.extras",
+          "name": "bairro",
+          "readers": [
+            "bkovivofixamsgativaah",
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptvwpp",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": [
+            "bkovivofixamsgativaah",
+            "fibrasubida17",
+            "vivofixawhatsapp",
+            "vivoiptvwpp",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototalplanoswppnovo"
+          ]
+        },
+        {
+          "namespace": "contact.extras",
+          "name": "cep",
+          "readers": [
+            "bkovivofixamsgativaah",
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptvwpp",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": [
+            "bkovivofixamsgativaah",
+            "fibrasubida17",
+            "vivofixawhatsapp",
+            "vivoiptvwpp",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototalplanoswppnovo"
+          ]
+        },
+        {
+          "namespace": "contact.extras",
+          "name": "complemento",
+          "readers": [
+            "bkovivofixamsgativaah",
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptvwpp",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": [
+            "bkovivofixamsgativaah",
+            "fibrasubida17",
+            "vivofixawhatsapp",
+            "vivoiptvwpp",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototalplanoswppnovo"
+          ]
+        },
+        {
+          "namespace": "contact.extras",
+          "name": "dataAgendamento1",
+          "readers": [
+            "vivofixadados",
+            "vivoiptvwpp",
+            "vivototaldados"
+          ],
+          "writtenBy": [
+            "vivoiptvwpp"
+          ]
+        },
+        {
+          "namespace": "contact.extras",
+          "name": "dataAgendamento2",
+          "readers": [
+            "vivofixadados",
+            "vivoiptvwpp",
+            "vivototaldados"
+          ],
+          "writtenBy": [
+            "vivoiptvwpp"
+          ]
+        },
+        {
+          "namespace": "contact.extras",
+          "name": "logradouro",
+          "readers": [
+            "bkovivofixamsgativaah",
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptvwpp",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": [
+            "bkovivofixamsgativaah",
+            "fibrasubida17",
+            "vivofixawhatsapp",
+            "vivoiptvwpp",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototalplanoswppnovo"
+          ]
+        },
+        {
+          "namespace": "contact.extras",
+          "name": "numEndereco",
+          "readers": [
+            "bkovivofixamsgativaah",
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptvwpp",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": [
+            "bkovivofixamsgativaah",
+            "fibrasubida17",
+            "vivofixawhatsapp",
+            "vivoiptvwpp",
+            "vivototalplanoswppnovo"
+          ]
+        },
+        {
+          "namespace": "contact.extras",
+          "name": "planName",
+          "readers": [
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": [
+            "fibrasubida17",
+            "vivofixawhatsapp",
+            "vivoiptveitvplanos",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ]
+        },
+        {
+          "namespace": "contact.extras",
+          "name": "planoDescription",
+          "readers": [
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": [
+            "fibrasubida17",
+            "vivofixawhatsapp",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ]
+        },
+        {
+          "namespace": "contact.extras",
+          "name": "protocoloWci",
+          "readers": [
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptvwpp",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": [
+            "fibrasubida17",
+            "vivofixawhatsapp",
+            "vivoiptvwpp",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototalplanoswppnovo"
+          ]
+        },
+        {
+          "namespace": "contact.extras",
+          "name": "uf",
+          "readers": [
+            "bkovivofixamsgativaah",
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptvwpp",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": [
+            "bkovivofixamsgativaah",
+            "fibrasubida17",
+            "vivofixawhatsapp",
+            "vivoiptvwpp",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototalplanoswppnovo"
+          ]
+        },
+        {
+          "namespace": "contact.extras",
+          "name": "UtmCampaign2",
+          "readers": [
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": [
+            "fibrasubida17",
+            "vivofixaabandonomsgatah",
+            "vivofixawhatsapp",
+            "vivototalplanoswppnovo"
+          ]
+        },
+        {
+          "namespace": "contact.extras",
+          "name": "UtmMedium",
+          "readers": [
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": [
+            "fibrasubida17",
+            "vivofixawhatsapp",
+            "vivototalplanoswppnovo"
+          ]
+        },
+        {
+          "namespace": "contact.extras",
+          "name": "UtmSource",
+          "readers": [
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": [
+            "fibrasubida17",
+            "vivofixawhatsapp",
+            "vivototalplanoswppnovo"
+          ]
+        },
+        {
+          "namespace": "context",
+          "name": "canal",
+          "readers": [
+            "vivofixadados",
+            "vivoiptveitvplanos"
+          ],
+          "writtenBy": [
+            "fibrasubida17",
+            "vivofixawhatsapp"
+          ]
+        },
+        {
+          "namespace": "context",
+          "name": "complemento",
+          "readers": [
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptvwpp",
+            "vivoitvplanos",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": [
+            "fibrasubida17",
+            "vivofixawhatsapp",
+            "vivototalplanoswppnovo"
+          ]
+        },
+        {
+          "namespace": "context",
+          "name": "idPedidoEndereco",
+          "readers": [
+            "vivofixadados"
+          ],
+          "writtenBy": [
+            "fibrasubida17",
+            "vivofixawhatsapp"
+          ]
+        },
+        {
+          "namespace": "context",
+          "name": "metaclientphone",
+          "readers": [
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptveitvplanos",
+            "vivoiptvwpp",
+            "vivoitvah",
+            "vivoitvplanos",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": [
+            "fibrasubida17",
+            "vivofixawhatsapp",
+            "vivoiptvwpp",
+            "vivoitvah",
+            "vivoitvplanos",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototalplanoswppnovo"
+          ]
+        },
+        {
+          "namespace": "context",
+          "name": "metadata",
+          "readers": [
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoitvplanos",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": [
+            "fibrasubida17",
+            "vivofixawhatsapp",
+            "vivosegurocelular",
+            "vivoseguros",
+            "vivototalplanoswppnovo"
+          ]
+        },
+        {
+          "namespace": "context",
+          "name": "regiao",
+          "readers": [
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptvwpp",
+            "vivoitvplanos",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": [
+            "fibrasubida17",
+            "vivofixawhatsapp",
+            "vivoiptvwpp",
+            "vivoitvplanos",
+            "vivototalplanoswppnovo"
+          ]
+        },
+        {
+          "namespace": "context",
+          "name": "routerNumero",
+          "readers": [
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivoiptveitvplanos",
+            "vivoiptvwpp",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": [
+            "fibrasubida17",
+            "vivofixawhatsapp",
+            "vivoiptveitvplanos",
+            "vivoiptvwpp",
+            "vivototalplanoswppnovo"
+          ]
+        },
+        {
+          "namespace": "context",
+          "name": "telefone",
+          "readers": [
+            "fibrasubida17",
+            "vivofixadados",
+            "vivofixawhatsapp",
+            "vivototaldados",
+            "vivototalplanoswppnovo"
+          ],
+          "writtenBy": [
+            "fibrasubida17",
+            "vivofixawhatsapp",
+            "vivototalplanoswppnovo"
+          ]
+        }
+      ]
+    }
+  ]
+}

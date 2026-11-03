@@ -1,0 +1,383 @@
+{
+  "id": "01a19f3d-8eb5-7342-adbe-1340e7337bc7",
+  "createdAt": "2026-11-03T02:29:34.005Z",
+  "updatedAt": "2026-11-03T02:31:56.079Z",
+  "name": "Vivo Seguros - Resumo e conclusão do pedido (manual)",
+  "folderId": "01a189b0-3019-71fb-b065-89267955ddd3",
+  "groups": [
+    {
+      "id": "01a19f3d-8eb1-720e-851c-2df3825d0a6f",
+      "title": "Confirma resumo do pedido",
+      "blocks": [
+        {
+          "id": "01a19f3d-8eb2-770d-8a28-637e17ed9514",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "action": "Enviar botões",
+            "buttons": [
+              {
+                "id": "b1",
+                "title": "Confirmar",
+                "examples": [
+                  "confirmar",
+                  "ok",
+                  "sim",
+                  "certo"
+                ],
+                "outgoingEdgeId": "01a19f3f-033c-728e-bacd-ce73d46aefb7"
+              },
+              {
+                "id": "b2",
+                "title": "Corrigir dados",
+                "examples": [
+                  "corrigir dados",
+                  "erro",
+                  "errado",
+                  "alterar"
+                ],
+                "outgoingEdgeId": "01a19f3f-051f-77cc-a2ff-c867450219b3"
+              }
+            ],
+            "channel": "{{channel}}",
+            "bodyText": "{{resumo}}\n\n{{confirma}}",
+            "awaitReply": true,
+            "understandTypedReply": true
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 261.50665771484364,
+        "y": -353.29334228515614
+      }
+    },
+    {
+      "id": "01a19f3d-8eb2-770d-8a28-7dba0ebc260b",
+      "title": "Pedido concluído",
+      "blocks": [
+        {
+          "id": "01a19f3d-8eb2-770d-8a28-82a29a2540da",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "body": "Recebemos o seu pedido, o número dele é: {{idPedido}}!\n\nEm breve você receberá a confirmação da sua compra por aqui mesmo!\n\nObrigado por escolher a Vivo. 💜",
+            "cards": [],
+            "action": "Enviar texto",
+            "buttons": [],
+            "channel": "{{channel}}",
+            "sections": []
+          }
+        },
+        {
+          "id": "01a19f3d-8eb2-770d-8a28-84c996943d85",
+          "type": "endSession",
+          "options": {}
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1135.5866577148436,
+        "y": 51.346657714843815
+      }
+    },
+    {
+      "id": "01a19f3d-8eb2-770d-8a28-a0277021c3af",
+      "title": "Conclui pedido na API",
+      "blocks": [
+        {
+          "id": "01a19f3d-8eb2-770d-8a28-a54ae775695d",
+          "type": "Webhook",
+          "options": {
+            "webhook": {
+              "url": "{{resource.blip.vivoitvplanos.apiurl}}",
+              "body": "{\"acao\": \"concluido\", \"plano\": \"{{planName}}\", \"preco\": \"{{price}}\", \"telefone\": \"{{wa_id}}\"}",
+              "method": "POST",
+              "headers": []
+            },
+            "responseVariableMapping": [
+              {
+                "id": "01a19f37-0718-766b-8da2-23f3ace1d79c",
+                "bodyPath": "data.idPedido",
+                "variableId": "01a19f3d-8eb1-720e-851c-24cccbb8cf11"
+              }
+            ]
+          },
+          "outgoingEdgeId": "01a19f3f-0703-70b6-a42e-07c5017ec4ee"
+        }
+      ],
+      "graphCoordinates": {
+        "x": 1135.5866577148436,
+        "y": -353.29334228515614
+      }
+    },
+    {
+      "id": "01a19f3e-12bf-7417-901b-d507837311e6",
+      "title": "Escolhe dado a corrigir",
+      "blocks": [
+        {
+          "id": "01a19f3e-12bf-7417-901b-d3585e0b4c56",
+          "type": "whatsapp-cloud",
+          "options": {
+            "to": "{{wa_id}}",
+            "action": "Enviar lista",
+            "channel": "{{channel}}",
+            "bodyText": "Qual dado deseja corrigir?",
+            "sections": [
+              {
+                "rows": [
+                  {
+                    "id": "r1",
+                    "title": "Endereço"
+                  },
+                  {
+                    "id": "r2",
+                    "title": "Nome Social"
+                  },
+                  {
+                    "id": "r3",
+                    "title": "CPF"
+                  },
+                  {
+                    "id": "r4",
+                    "title": "E-mail"
+                  }
+                ],
+                "title": "Dados"
+              }
+            ],
+            "awaitReply": true,
+            "buttonText": "Escolher dado",
+            "footerText": "",
+            "headerText": "",
+            "understandTypedReply": true
+          }
+        }
+      ],
+      "graphCoordinates": {
+        "x": 681.9866577148435,
+        "y": -320.17334228515614
+      }
+    }
+  ],
+  "events": [
+    {
+      "id": "01a19f3d-8eb1-720e-851c-2adad59f8cc7",
+      "type": "start",
+      "outgoingEdgeId": "01a19f3d-8eb2-770d-8a28-b7a518e83c1b",
+      "graphCoordinates": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ],
+  "variables": [
+    {
+      "id": "01a19f3d-8eb0-701f-aaca-fd55e98ddca2",
+      "name": "session_id",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb0-701f-aacb-00fb64e2ee52",
+      "name": "init_date_time",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb0-701f-aacb-04f792bda134",
+      "name": "current_flow",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb0-701f-aacb-0aec0912c1f0",
+      "name": "current_flow_name",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb0-701f-aacb-0e95cf0c71b5",
+      "name": "current_block",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb0-701f-aacb-122619b91128",
+      "name": "current_group",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851b-c577ff1006e3",
+      "name": "last_message",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851b-ca454f37e2c9",
+      "name": "media",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851b-cde35e9d40cb",
+      "name": "api_response",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851b-d3b4a4183e50",
+      "name": "api_status",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851b-d63ae70cbcec",
+      "name": "api_ok",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851b-da8881df094b",
+      "name": "api_debug",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851b-dcecf03e8e84",
+      "name": "flow_response",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851b-e03c118bbca1",
+      "name": "channel",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851b-e797b68ab067",
+      "name": "channel_phone",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851b-e87366f3ec12",
+      "name": "wa_id",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851b-ef69d3f633f5",
+      "name": "user_name",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851b-f24cd472f93f",
+      "name": "user_id",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851b-f5ac7f1e5b6e",
+      "name": "initial_channel",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851b-fbc86a839b25",
+      "name": "initial_message",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851b-fff8518da360",
+      "name": "template_name",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851c-012ce9e3ad95",
+      "name": "session_origin",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851c-06b7991bbca4",
+      "name": "last_followup",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851c-0b82304270da",
+      "name": "last_intent",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851c-0c8ac890421a",
+      "name": "last_sentiment",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851c-11a0dc6985b0",
+      "name": "last_offensive",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851c-16d495b21467",
+      "name": "last_entities",
+      "isSessionVariable": true
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851c-180cc7622f04",
+      "name": "planName",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851c-1ff4f89a085d",
+      "name": "price",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851c-23c466b88c35",
+      "name": "termo",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f3d-8eb1-720e-851c-24cccbb8cf11",
+      "name": "idPedido",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f3e-c960-7705-abef-97ae775792bb",
+      "name": "resumo",
+      "isSessionVariable": false
+    },
+    {
+      "id": "01a19f3e-cdc9-71ad-a842-39429c3418c3",
+      "name": "confirma",
+      "isSessionVariable": false
+    }
+  ],
+  "edges": [
+    {
+      "id": "01a19f3d-8eb2-770d-8a28-b7a518e83c1b",
+      "to": {
+        "groupId": "01a19f3d-8eb1-720e-851c-2df3825d0a6f"
+      },
+      "from": {
+        "eventId": "01a19f3d-8eb1-720e-851c-2adad59f8cc7"
+      }
+    },
+    {
+      "id": "01a19f3f-033c-728e-bacd-ce73d46aefb7",
+      "to": {
+        "groupId": "01a19f3d-8eb2-770d-8a28-a0277021c3af"
+      },
+      "from": {
+        "itemId": "b1",
+        "blockId": "01a19f3d-8eb2-770d-8a28-637e17ed9514"
+      }
+    },
+    {
+      "id": "01a19f3f-051f-77cc-a2ff-c867450219b3",
+      "to": {
+        "groupId": "01a19f3e-12bf-7417-901b-d507837311e6"
+      },
+      "from": {
+        "itemId": "b2",
+        "blockId": "01a19f3d-8eb2-770d-8a28-637e17ed9514"
+      }
+    },
+    {
+      "id": "01a19f3f-0703-70b6-a42e-07c5017ec4ee",
+      "to": {
+        "groupId": "01a19f3d-8eb2-770d-8a28-7dba0ebc260b"
+      },
+      "from": {
+        "blockId": "01a19f3d-8eb2-770d-8a28-a54ae775695d"
+      }
+    }
+  ],
+  "publicId": null,
+  "organizationId": "74d6acdf-822d-417d-a8d4-6a0f9e6b8c17",
+  "isArchived": false,
+  "isClosed": false
+}

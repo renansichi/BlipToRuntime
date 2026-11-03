@@ -1,0 +1,2553 @@
+{
+  "schemaVersion": "2.0",
+  "adaptations": [
+    {
+      "id": "vivofixadados:blip-command",
+      "sourceLocations": [
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/7a4648e2-4ad1-42bf-a792-f0406d6c7fbf/$leavingCustomActions/8"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/7a4648e2-4ad1-42bf-a792-f0406d6c7fbf/$leavingCustomActions/9"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/bb52f419-a9ca-4a79-aebe-f2f23fefac69/$leavingCustomActions/8"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/bb52f419-a9ca-4a79-aebe-f2f23fefac69/$leavingCustomActions/9"
+        }
+      ],
+      "journeyId": "vivofixadados",
+      "originalBehavior": "ProcessCommand na API de comandos da Blip (contatos, tickets, buckets, historico).",
+      "proposedBehavior": "Nenhuma chamada e emitida; a variavel de saida fica sem valor ate haver integracao suportada confirmada.",
+      "reason": "Capacidade especifica da plataforma Blip, sem equivalente nativo no Kayros.",
+      "kind": "integration",
+      "changesBusinessBehavior": true,
+      "targetStrategy": "parameter-required",
+      "fallback": {
+        "kind": null,
+        "queueBindingKey": null,
+        "logicalFlow": null,
+        "promptText": null,
+        "retryPolicy": null,
+        "endReason": null
+      },
+      "acceptance": {
+        "status": "proposed",
+        "responsible": null,
+        "date": null,
+        "evidenceFile": null
+      },
+      "validationScenarioIds": [],
+      "occurrences": 4
+    },
+    {
+      "id": "vivofixadados:compound-condition-code",
+      "sourceLocations": [
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/8ba61b0c-4483-4149-9324-07cf15ec228e"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/8ba61b0c-4483-4149-9324-07cf15ec228e"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/8ba61b0c-4483-4149-9324-07cf15ec228e"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/7be92c26-9173-49d7-a905-a2bc8627114e/$leavingCustomActions/6"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd/$leavingCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/c545b6c4-5dc8-4217-98dc-c9c0ae0dab79"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/c545b6c4-5dc8-4217-98dc-c9c0ae0dab79"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/c545b6c4-5dc8-4217-98dc-c9c0ae0dab79"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/c545b6c4-5dc8-4217-98dc-c9c0ae0dab79"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/c545b6c4-5dc8-4217-98dc-c9c0ae0dab79"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/c545b6c4-5dc8-4217-98dc-c9c0ae0dab79"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/5e7c8d2b-c9aa-4db9-9f1b-c7c70d81ba84"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9891669e-2a07-4b9a-82b5-d3f4f4830356/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/34cbc04f-3737-4f5e-9cb6-11ce20c0a9c4/$leavingCustomActions/4"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/21ed1d11-ab2d-4b2d-a097-970cecd6ebc4"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/21ed1d11-ab2d-4b2d-a097-970cecd6ebc4"
+        }
+      ],
+      "journeyId": "vivofixadados",
+      "originalBehavior": "Condicoes combinando AND entre predicados e OR entre valores.",
+      "proposedBehavior": "Booleano calculado em Code e comparado a \"true\".",
+      "reason": "Uma Condition do Kayros usa um unico operador logico por ramo.",
+      "kind": "validation",
+      "changesBusinessBehavior": false,
+      "targetStrategy": "code-boolean",
+      "fallback": {
+        "kind": null,
+        "queueBindingKey": null,
+        "logicalFlow": null,
+        "promptText": null,
+        "retryPolicy": null,
+        "endReason": null
+      },
+      "acceptance": {
+        "status": "proposed",
+        "responsible": null,
+        "date": null,
+        "evidenceFile": null
+      },
+      "validationScenarioIds": [],
+      "occurrences": 18
+    },
+    {
+      "id": "vivofixadados:dynamic-destination-router",
+      "sourceLocations": [
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/fallback"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/c8884dc9-83d1-4fe6-b1d6-113500929a5b"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/6edb0c7c-d6e1-42b3-ab10-6ad3992286b1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/a038c05c-54a5-44d2-8399-c9600b6d4f83"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ff3117d1-a373-4361-9cb7-57505737ca9f"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/b8af9f00-0c7f-4496-b0ca-383c95476867"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/32c3d55c-d7ca-402b-8ee5-7c77f895add4"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/21b346b6-0275-440b-b3a7-dbaabfdb6f41"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/038a2e0f-a16b-4600-86a6-94ec390c5194"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/038a2e0f-a16b-4600-86a6-94ec390c5194"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9e6b6b11-c8b2-4ab4-b1d6-4f55f75cb449"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0ef8258a-514a-4e5a-86b6-e3b54c2db16e"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ef0d808a-3c4d-4128-ba66-fb07f10ed794"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0ad75c48-bb89-487a-a93f-01cf049a99e5"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0d93db1c-11cd-4957-a817-09e2e04f565d"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0d93db1c-11cd-4957-a817-09e2e04f565d"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0313fd19-c008-454f-8f16-30b1a24845e5"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ae5c2fa1-576e-4996-9694-eeca8f052a5f"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/39006007-54b2-477b-a9f6-9539f821770f"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/39006007-54b2-477b-a9f6-9539f821770f"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/319bd71c-e0ae-42d8-96f5-16dc1714e60b"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f1c50ea9-3cdf-4bf6-be41-a192934403cf"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/629aa758-2384-48ff-9d80-74fb513ed844"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/04bd28ee-1e40-48aa-843f-2e2b939a0db9"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f235f9ee-c29d-4f82-a62a-5c8e3c21a424"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/99e09c5e-0d6c-49fc-abba-e2d66a90f06d"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/afdc9d14-4d8e-43da-9fc3-0f14fe715d12"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/7d5669fb-0746-4224-9ce2-bbb1492212ae"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9c5a1613-b88f-4671-b034-1e3dae157fb2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/846b5065-aa7a-426a-b168-2edd1acdbb78"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/27dd308a-2299-4f39-8ce5-ee54af879703"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/62b928df-9c69-4d44-a7cc-6008e635cc39"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9891669e-2a07-4b9a-82b5-d3f4f4830356"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/c177e0eb-93cf-4271-9c84-4844af750a84"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/e72ae58b-82df-4426-b004-3c5119782f57"
+        }
+      ],
+      "journeyId": "vivofixadados",
+      "originalBehavior": "Saida cujo destino e o valor de uma variavel em tempo de execucao.",
+      "proposedBehavior": "Condition comparando a variavel com os ids de estado candidatos; valor desconhecido segue para o estado de excecao.",
+      "reason": "Edges do Kayros tem destino fixo.",
+      "kind": "presentation",
+      "changesBusinessBehavior": false,
+      "targetStrategy": "condition-router",
+      "fallback": {
+        "kind": null,
+        "queueBindingKey": null,
+        "logicalFlow": null,
+        "promptText": null,
+        "retryPolicy": null,
+        "endReason": null
+      },
+      "acceptance": {
+        "status": "proposed",
+        "responsible": null,
+        "date": null,
+        "evidenceFile": null
+      },
+      "validationScenarioIds": [],
+      "occurrences": 36
+    },
+    {
+      "id": "vivofixadados:dynamic-raw-payload",
+      "sourceLocations": [
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0d93db1c-11cd-4957-a817-09e2e04f565d/$contentActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/319bd71c-e0ae-42d8-96f5-16dc1714e60b/$contentActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd/$contentActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/62b928df-9c69-4d44-a7cc-6008e635cc39/$contentActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9891669e-2a07-4b9a-82b5-d3f4f4830356/$contentActions/1"
+        }
+      ],
+      "journeyId": "vivofixadados",
+      "originalBehavior": "Payload de mensagem montado por script em tempo de execucao.",
+      "proposedBehavior": "Enviar raw com o payload da variavel; o script que o monta e convertido em Code.",
+      "reason": "O formato final do payload so existe em tempo de execucao.",
+      "kind": "presentation",
+      "changesBusinessBehavior": false,
+      "targetStrategy": "raw-from-variable",
+      "fallback": {
+        "kind": null,
+        "queueBindingKey": null,
+        "logicalFlow": null,
+        "promptText": null,
+        "retryPolicy": null,
+        "endReason": null
+      },
+      "acceptance": {
+        "status": "proposed",
+        "responsible": null,
+        "date": null,
+        "evidenceFile": null
+      },
+      "validationScenarioIds": [],
+      "occurrences": 5
+    },
+    {
+      "id": "vivofixadados:flow-reply-detection",
+      "sourceLocations": [
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd/$leavingCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd/$leavingCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd/$leavingCustomActions/3"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd/$leavingCustomActions/4"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd/$leavingCustomActions/6"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd/$leavingCustomActions/7"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd/$leavingCustomActions/9"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/26fe2d2c-803e-48b7-a5a7-9fdf2216687f/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/26fe2d2c-803e-48b7-a5a7-9fdf2216687f"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f1c50ea9-3cdf-4bf6-be41-a192934403cf/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f1c50ea9-3cdf-4bf6-be41-a192934403cf/$leavingCustomActions/3"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f1c50ea9-3cdf-4bf6-be41-a192934403cf/$leavingCustomActions/4"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f1c50ea9-3cdf-4bf6-be41-a192934403cf/$leavingCustomActions/5"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f1c50ea9-3cdf-4bf6-be41-a192934403cf/$leavingCustomActions/6"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f1c50ea9-3cdf-4bf6-be41-a192934403cf/$leavingCustomActions/11"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f1c50ea9-3cdf-4bf6-be41-a192934403cf"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9891669e-2a07-4b9a-82b5-d3f4f4830356/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9891669e-2a07-4b9a-82b5-d3f4f4830356/$leavingCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9891669e-2a07-4b9a-82b5-d3f4f4830356/$leavingCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9891669e-2a07-4b9a-82b5-d3f4f4830356/$leavingCustomActions/3"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9891669e-2a07-4b9a-82b5-d3f4f4830356/$leavingCustomActions/6"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9891669e-2a07-4b9a-82b5-d3f4f4830356/$leavingCustomActions/7"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9891669e-2a07-4b9a-82b5-d3f4f4830356/$leavingCustomActions/9"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9891669e-2a07-4b9a-82b5-d3f4f4830356"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9891669e-2a07-4b9a-82b5-d3f4f4830356"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9891669e-2a07-4b9a-82b5-d3f4f4830356"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/34cbc04f-3737-4f5e-9cb6-11ce20c0a9c4/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/34cbc04f-3737-4f5e-9cb6-11ce20c0a9c4"
+        }
+      ],
+      "journeyId": "vivofixadados",
+      "originalBehavior": "Resposta de formulario (WhatsApp Flow) detectada por input.message@content = Sent.",
+      "proposedBehavior": "Detectada por flow_response preenchido (retorno estruturado do Flow no Kayros); validar na homologacao.",
+      "reason": "O envelope da mensagem recebida nao existe no Kayros; o retorno do Flow chega em flow_response.",
+      "kind": "validation",
+      "changesBusinessBehavior": true,
+      "targetStrategy": "flow-response-variable",
+      "fallback": {
+        "kind": null,
+        "queueBindingKey": null,
+        "logicalFlow": null,
+        "promptText": null,
+        "retryPolicy": null,
+        "endReason": null
+      },
+      "acceptance": {
+        "status": "proposed",
+        "responsible": null,
+        "date": null,
+        "evidenceFile": null
+      },
+      "validationScenarioIds": [],
+      "occurrences": 33
+    },
+    {
+      "id": "vivofixadados:html-markup-to-whatsapp",
+      "sourceLocations": [
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/6edb0c7c-d6e1-42b3-ab10-6ad3992286b1/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/a038c05c-54a5-44d2-8399-c9600b6d4f83/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ff3117d1-a373-4361-9cb7-57505737ca9f/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/b8af9f00-0c7f-4496-b0ca-383c95476867/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/32c3d55c-d7ca-402b-8ee5-7c77f895add4/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0ad75c48-bb89-487a-a93f-01cf049a99e5/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9df292d0-3560-4e61-8c29-17ce0d9c9cd3/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ee7a743b-ffad-44fd-b569-05289153e600/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/5c0d2633-cfab-4bb7-9bea-88d63f6aaddd/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f235f9ee-c29d-4f82-a62a-5c8e3c21a424/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/99e09c5e-0d6c-49fc-abba-e2d66a90f06d/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9c5a1613-b88f-4671-b034-1e3dae157fb2/$contentActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/846b5065-aa7a-426a-b168-2edd1acdbb78/$contentActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/39185831-39d8-497c-981e-115280ba33c8/$contentActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/3bc1eb2c-9ab4-43cc-9e3f-9fa5c2a258a8/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/3bc1eb2c-9ab4-43cc-9e3f-9fa5c2a258a8/$contentActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/27951029-775c-40f9-b1dc-eee72a99c13f/$contentActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/7be630c9-e40e-4e20-83eb-4db9b530521d/$contentActions/1"
+        }
+      ],
+      "journeyId": "vivofixadados",
+      "originalBehavior": "Texto com marcacao HTML (<b>, <i>, <br>) da Blip.",
+      "proposedBehavior": "Marcacao convertida para a sintaxe do WhatsApp (*negrito*, _italico_).",
+      "reason": "Mudanca de apresentacao que preserva o resultado.",
+      "kind": "presentation",
+      "changesBusinessBehavior": false,
+      "targetStrategy": "markup-conversion",
+      "fallback": {
+        "kind": null,
+        "queueBindingKey": null,
+        "logicalFlow": null,
+        "promptText": null,
+        "retryPolicy": null,
+        "endReason": null
+      },
+      "acceptance": {
+        "status": "proposed",
+        "responsible": null,
+        "date": null,
+        "evidenceFile": null
+      },
+      "validationScenarioIds": [],
+      "occurrences": 18
+    },
+    {
+      "id": "vivofixadados:input-message-envelope",
+      "sourceLocations": [
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/fallback"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/a038c05c-54a5-44d2-8399-c9600b6d4f83/$leavingCustomActions/3"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ff3117d1-a373-4361-9cb7-57505737ca9f/$leavingCustomActions/3"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/b8af9f00-0c7f-4496-b0ca-383c95476867/$leavingCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/21b346b6-0275-440b-b3a7-dbaabfdb6f41/$leavingCustomActions/3"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0ad75c48-bb89-487a-a93f-01cf049a99e5/$leavingCustomActions/8"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/7be92c26-9173-49d7-a905-a2bc8627114e/$leavingCustomActions/9"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0313fd19-c008-454f-8f16-30b1a24845e5/$leavingCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ae5c2fa1-576e-4996-9694-eeca8f052a5f/$leavingCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/6b0e5a9d-0239-44bc-be37-a53760d6bd84/$leavingCustomActions/9"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/274bf638-11e3-428c-812f-2c8d2eaa8ec6/$leavingCustomActions/9"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/55feb79f-c26e-4263-ae9f-105e8f84c3b7/$leavingCustomActions/7"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f1c50ea9-3cdf-4bf6-be41-a192934403cf/$leavingCustomActions/9"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/7a4648e2-4ad1-42bf-a792-f0406d6c7fbf"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/e172db1b-ba8e-4fbb-a36a-e7927f1a58cd/$leavingCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/43bcc488-5742-44ee-9ea0-4a40a1d286d0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f4b037a3-4395-4e38-a8e1-b95bfe3f1870/$leavingCustomActions/0"
+        }
+      ],
+      "journeyId": "vivofixadados",
+      "originalBehavior": "Condicao le o tipo/metadados da mensagem recebida (ex.: audio, imagem, documento).",
+      "proposedBehavior": "Variavel auxiliar nunca preenchida: o ramo nao e tomado ate o tipo de mensagem ser obtido (evento reply captura tipo e nome do input).",
+      "reason": "O envelope da mensagem da Blip nao e exposto como variavel no Kayros.",
+      "kind": "validation",
+      "changesBusinessBehavior": true,
+      "targetStrategy": "parameter-required",
+      "fallback": {
+        "kind": null,
+        "queueBindingKey": null,
+        "logicalFlow": null,
+        "promptText": null,
+        "retryPolicy": null,
+        "endReason": null
+      },
+      "acceptance": {
+        "status": "proposed",
+        "responsible": null,
+        "date": null,
+        "evidenceFile": null
+      },
+      "validationScenarioIds": [],
+      "occurrences": 17
+    },
+    {
+      "id": "vivofixadados:input-regex-validation",
+      "sourceLocations": [
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/b8af9f00-0c7f-4496-b0ca-383c95476867"
+        }
+      ],
+      "journeyId": "vivofixadados",
+      "originalBehavior": "Validacao de input por regex da Blip, com mensagem de erro e nova tentativa.",
+      "proposedBehavior": "Condition \"Matches regex\" apos a captura; invalido envia o erro e repete a pergunta.",
+      "reason": "Validacao fica no fluxo; dialeto de regex e limites (500 caracteres, 50 ms) a validar.",
+      "kind": "validation",
+      "changesBusinessBehavior": false,
+      "targetStrategy": "condition-regex",
+      "fallback": {
+        "kind": null,
+        "queueBindingKey": null,
+        "logicalFlow": null,
+        "promptText": null,
+        "retryPolicy": null,
+        "endReason": null
+      },
+      "acceptance": {
+        "status": "proposed",
+        "responsible": null,
+        "date": null,
+        "evidenceFile": null
+      },
+      "validationScenarioIds": [],
+      "occurrences": 1
+    },
+    {
+      "id": "vivofixadados:input-timeout-followup",
+      "sourceLocations": [
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/c8884dc9-83d1-4fe6-b1d6-113500929a5b"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/6edb0c7c-d6e1-42b3-ab10-6ad3992286b1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/a038c05c-54a5-44d2-8399-c9600b6d4f83"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ff3117d1-a373-4361-9cb7-57505737ca9f"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/b8af9f00-0c7f-4496-b0ca-383c95476867"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/32c3d55c-d7ca-402b-8ee5-7c77f895add4"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/21b346b6-0275-440b-b3a7-dbaabfdb6f41"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9e6b6b11-c8b2-4ab4-b1d6-4f55f75cb449"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0ef8258a-514a-4e5a-86b6-e3b54c2db16e"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ef0d808a-3c4d-4128-ba66-fb07f10ed794"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0ad75c48-bb89-487a-a93f-01cf049a99e5"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9df292d0-3560-4e61-8c29-17ce0d9c9cd3"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0d93db1c-11cd-4957-a817-09e2e04f565d"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0313fd19-c008-454f-8f16-30b1a24845e5"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ae5c2fa1-576e-4996-9694-eeca8f052a5f"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/39006007-54b2-477b-a9f6-9539f821770f"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/319bd71c-e0ae-42d8-96f5-16dc1714e60b"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/5c0d2633-cfab-4bb7-9bea-88d63f6aaddd"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f1c50ea9-3cdf-4bf6-be41-a192934403cf"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f55018e9-5a95-4dd2-a7c8-b99e11fde893"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f235f9ee-c29d-4f82-a62a-5c8e3c21a424"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/99e09c5e-0d6c-49fc-abba-e2d66a90f06d"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/afdc9d14-4d8e-43da-9fc3-0f14fe715d12"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/7d5669fb-0746-4224-9ce2-bbb1492212ae"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f217e64e-76f8-4fe4-8158-f88e167579e3"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/4e0d1d82-4496-4efa-aece-24750b5f8ae5"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9c5a1613-b88f-4671-b034-1e3dae157fb2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/846b5065-aa7a-426a-b168-2edd1acdbb78"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/27dd308a-2299-4f39-8ce5-ee54af879703"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/62b928df-9c69-4d44-a7cc-6008e635cc39"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/39185831-39d8-497c-981e-115280ba33c8"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/27951029-775c-40f9-b1dc-eee72a99c13f"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/7be630c9-e40e-4e20-83eb-4db9b530521d"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9891669e-2a07-4b9a-82b5-d3f4f4830356"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/c177e0eb-93cf-4271-9c84-4844af750a84"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/e72ae58b-82df-4426-b004-3c5119782f57"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/d153a212-52d6-4069-baca-8173ee0bdc99"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/46bbd41c-c79b-4d71-9e2a-6fc64771d2fb"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/34cbc04f-3737-4f5e-9cb6-11ce20c0a9c4"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/49ff02d6-be3c-4fd3-af66-e2d11632fe35"
+        }
+      ],
+      "journeyId": "vivofixadados",
+      "originalBehavior": "Input com expiracao: sem resposta no prazo, segue a saida \"input nao existe\".",
+      "proposedBehavior": "Follow-up por inatividade do bloco WhatsApp desvia para um roteador que usa timeout_state para escolher o destino.",
+      "reason": "O Kayros tem um unico evento followUp por bot; destino por estado exige roteador. Semantica de prazo a validar na homologacao.",
+      "kind": "wait",
+      "changesBusinessBehavior": true,
+      "targetStrategy": "followup-router",
+      "fallback": {
+        "kind": null,
+        "queueBindingKey": null,
+        "logicalFlow": null,
+        "promptText": null,
+        "retryPolicy": null,
+        "endReason": null
+      },
+      "acceptance": {
+        "status": "proposed",
+        "responsible": null,
+        "date": null,
+        "evidenceFile": null
+      },
+      "validationScenarioIds": [],
+      "occurrences": 41
+    },
+    {
+      "id": "vivofixadados:merge-contact-session",
+      "sourceLocations": [
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/onboarding/$leavingCustomActions/6"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/c8884dc9-83d1-4fe6-b1d6-113500929a5b/$enteringCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/6edb0c7c-d6e1-42b3-ab10-6ad3992286b1/$leavingCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/a038c05c-54a5-44d2-8399-c9600b6d4f83/$leavingCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ff3117d1-a373-4361-9cb7-57505737ca9f/$leavingCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/b8af9f00-0c7f-4496-b0ca-383c95476867/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/fa814fe2-21c6-4945-b72b-f245dfc003f0/$enteringCustomActions/9"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0ad75c48-bb89-487a-a93f-01cf049a99e5/$leavingCustomActions/3"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/cd52b86a-be0d-4011-ae9b-299bc8ce88f6/$enteringCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/466acb13-8c9b-4506-8747-2a0a264e4973/$enteringCustomActions/7"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/5f828763-a8a5-4e4b-b31a-ce182e395536/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/99eb48cb-dde7-486c-b238-3aafea764088/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/99eb48cb-dde7-486c-b238-3aafea764088/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/99eb48cb-dde7-486c-b238-3aafea764088/$enteringCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/99eb48cb-dde7-486c-b238-3aafea764088/$enteringCustomActions/3"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/e266e159-cc24-4165-92ab-9f3ce523df3e/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/51550a60-4692-4c46-8768-da65e04919f0/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/7be92c26-9173-49d7-a905-a2bc8627114e/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0d93db1c-11cd-4957-a817-09e2e04f565d/$enteringCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/94de2790-5e7a-491c-9635-a03e55dacd41/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ec6037ff-8e12-49a2-8eaa-4db3d9bb4757/$enteringCustomActions/7"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ec6037ff-8e12-49a2-8eaa-4db3d9bb4757/$leavingCustomActions/3"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ec6037ff-8e12-49a2-8eaa-4db3d9bb4757/$leavingCustomActions/5"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd/$leavingCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd/$leavingCustomActions/3"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd/$leavingCustomActions/4"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/4b23bf19-4798-47a1-b888-04e32ae8249a/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/26fe2d2c-803e-48b7-a5a7-9fdf2216687f/$leavingCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/6b0e5a9d-0239-44bc-be37-a53760d6bd84/$leavingCustomActions/3"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/274bf638-11e3-428c-812f-2c8d2eaa8ec6/$leavingCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/55feb79f-c26e-4263-ae9f-105e8f84c3b7/$leavingCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ff462f6e-80ac-4f21-9f11-d332d88d612f/$leavingCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f1c50ea9-3cdf-4bf6-be41-a192934403cf/$enteringCustomActions/4"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f1c50ea9-3cdf-4bf6-be41-a192934403cf/$leavingCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f1c50ea9-3cdf-4bf6-be41-a192934403cf/$leavingCustomActions/11"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f55018e9-5a95-4dd2-a7c8-b99e11fde893/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/7140d466-8042-4c5d-9677-f2661815d87e/$enteringCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0111b9d4-78ca-4c7c-9d74-13a0784d25aa/$enteringCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/dd454e27-b995-4c4f-a49a-a6aaf1005383/$leavingCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/dd454e27-b995-4c4f-a49a-a6aaf1005383/$leavingCustomActions/5"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/13af0f48-438e-4a8b-aa0a-478fa6d01ea5/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/13af0f48-438e-4a8b-aa0a-478fa6d01ea5/$leavingCustomActions/6"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/13af0f48-438e-4a8b-aa0a-478fa6d01ea5/$leavingCustomActions/7"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/3bc1eb2c-9ab4-43cc-9e3f-9fa5c2a258a8/$leavingCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/3bc1eb2c-9ab4-43cc-9e3f-9fa5c2a258a8/$leavingCustomActions/4"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/27951029-775c-40f9-b1dc-eee72a99c13f/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/7be630c9-e40e-4e20-83eb-4db9b530521d/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9891669e-2a07-4b9a-82b5-d3f4f4830356/$leavingCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9891669e-2a07-4b9a-82b5-d3f4f4830356/$leavingCustomActions/3"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9891669e-2a07-4b9a-82b5-d3f4f4830356/$leavingCustomActions/4"
+        }
+      ],
+      "journeyId": "vivofixadados",
+      "originalBehavior": "MergeContact grava extras do contato de forma duravel na Blip.",
+      "proposedBehavior": "Campos gravados como variaveis de sessao contact_extras_*; nao persistem entre conversas.",
+      "reason": "Decisao Q08: dados temporarios na sessao; persistencia duravel so com API/base existente confirmada.",
+      "kind": "data",
+      "changesBusinessBehavior": true,
+      "targetStrategy": "session-variable",
+      "fallback": {
+        "kind": null,
+        "queueBindingKey": null,
+        "logicalFlow": null,
+        "promptText": null,
+        "retryPolicy": null,
+        "endReason": null
+      },
+      "acceptance": {
+        "status": "accepted",
+        "responsible": "Renan",
+        "date": "2026-11-02",
+        "evidenceFile": "docs/piloto/aceite-dados-2026-11-02.md"
+      },
+      "validationScenarioIds": [],
+      "occurrences": 60
+    },
+    {
+      "id": "vivofixadados:merge-contact-write-only-discard",
+      "sourceLocations": [
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/c8884dc9-83d1-4fe6-b1d6-113500929a5b/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/6edb0c7c-d6e1-42b3-ab10-6ad3992286b1/$enteringCustomActions/4"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/6edb0c7c-d6e1-42b3-ab10-6ad3992286b1/$leavingCustomActions/9"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/a038c05c-54a5-44d2-8399-c9600b6d4f83/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ff3117d1-a373-4361-9cb7-57505737ca9f/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/b8af9f00-0c7f-4496-b0ca-383c95476867/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/fa814fe2-21c6-4945-b72b-f245dfc003f0/$enteringCustomActions/6"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/8a01ded1-76b8-459d-a6d6-d72c81ab6b9e/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/8a01ded1-76b8-459d-a6d6-d72c81ab6b9e/$enteringCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/21b346b6-0275-440b-b3a7-dbaabfdb6f41/$enteringCustomActions/3"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0ef8258a-514a-4e5a-86b6-e3b54c2db16e/$enteringCustomActions/3"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0ad75c48-bb89-487a-a93f-01cf049a99e5/$enteringCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0ad75c48-bb89-487a-a93f-01cf049a99e5/$leavingCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/cd52b86a-be0d-4011-ae9b-299bc8ce88f6/$enteringCustomActions/3"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/466acb13-8c9b-4506-8747-2a0a264e4973/$enteringCustomActions/9"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9df292d0-3560-4e61-8c29-17ce0d9c9cd3/$enteringCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9df292d0-3560-4e61-8c29-17ce0d9c9cd3/$enteringCustomActions/3"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/01950547-f0e8-46d3-8f35-44feac04b6dd/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/e266e159-cc24-4165-92ab-9f3ce523df3e/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/51550a60-4692-4c46-8768-da65e04919f0/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/7be92c26-9173-49d7-a905-a2bc8627114e/$enteringCustomActions/3"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/7be92c26-9173-49d7-a905-a2bc8627114e/$enteringCustomActions/4"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/7be92c26-9173-49d7-a905-a2bc8627114e/$leavingCustomActions/3"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/7be92c26-9173-49d7-a905-a2bc8627114e/$leavingCustomActions/4"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/a0c6ca55-1e66-4cc0-b2ae-bf12379f275b/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0313fd19-c008-454f-8f16-30b1a24845e5/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ae5c2fa1-576e-4996-9694-eeca8f052a5f/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/48c0b190-136d-4d14-8cd5-7bdbd7242607/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f302c7d1-fac3-4374-bd00-c7c15fc088fb/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9c0c1930-ff82-4e51-96c3-d4dab45cf689/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0d6d9d60-c8cc-49c8-a97f-0dac4da1f5ec/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/49fcf715-24b0-47d7-a9b7-38fa007d7f36/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/39006007-54b2-477b-a9f6-9539f821770f/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/39006007-54b2-477b-a9f6-9539f821770f/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/39006007-54b2-477b-a9f6-9539f821770f/$enteringCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/319bd71c-e0ae-42d8-96f5-16dc1714e60b/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/319bd71c-e0ae-42d8-96f5-16dc1714e60b/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/319bd71c-e0ae-42d8-96f5-16dc1714e60b/$enteringCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/5c0d2633-cfab-4bb7-9bea-88d63f6aaddd/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/5c0d2633-cfab-4bb7-9bea-88d63f6aaddd/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/5c0d2633-cfab-4bb7-9bea-88d63f6aaddd/$enteringCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ec6037ff-8e12-49a2-8eaa-4db3d9bb4757/$enteringCustomActions/8"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ec6037ff-8e12-49a2-8eaa-4db3d9bb4757/$leavingCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ec6037ff-8e12-49a2-8eaa-4db3d9bb4757/$leavingCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ec6037ff-8e12-49a2-8eaa-4db3d9bb4757/$leavingCustomActions/7"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ec6037ff-8e12-49a2-8eaa-4db3d9bb4757/$leavingCustomActions/8"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/c6ac96ed-f936-4ed7-950c-3b8a04ea5543/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/99c60a3b-f041-46b4-a239-47eb6710e501/$leavingCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/26fe2d2c-803e-48b7-a5a7-9fdf2216687f/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/6b0e5a9d-0239-44bc-be37-a53760d6bd84/$leavingCustomActions/4"
+        }
+      ],
+      "journeyId": "vivofixadados",
+      "originalBehavior": "MergeContact grava marcadores/etapas no contato que nenhum bot do pacote le (no maximo, relatorios ou campanhas fora do bot).",
+      "proposedBehavior": "Escrita descartada: o marcador nao e gravado nem na sessao.",
+      "reason": "Decisao do responsavel: marcadores so escritos nao sao mais necessarios.",
+      "kind": "data",
+      "changesBusinessBehavior": true,
+      "targetStrategy": "discard-write-only",
+      "fallback": {
+        "kind": null,
+        "queueBindingKey": null,
+        "logicalFlow": null,
+        "promptText": null,
+        "retryPolicy": null,
+        "endReason": null
+      },
+      "acceptance": {
+        "status": "accepted",
+        "responsible": "Renan",
+        "date": "2026-11-02",
+        "evidenceFile": "docs/piloto/aceite-dados-2026-11-02.md"
+      },
+      "validationScenarioIds": [],
+      "occurrences": 103
+    },
+    {
+      "id": "vivofixadados:redirect-context",
+      "sourceLocations": [
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/8b39391c-a004-4ce2-b704-758abb5602b4/$enteringCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ee88aaa6-9358-44d4-95d5-4d6b3326207a/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/adfa7312-befb-4b7e-8618-0511b9ab1be5/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/2afdd9c1-49ec-4173-affa-958fc9726ad4/$enteringCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/af01cb70-d247-4bed-b3d8-8b3d4316a0a9/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/354fa0c2-403c-466c-ac2b-7d12a5150510/$enteringCustomActions/5"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/6d9f8a65-4a51-4d04-896f-6cf2e29361a5/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/8d5da508-8d3a-49a5-ad4e-fcbe07ebf76d/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/81b777ae-8ba4-4206-a0b3-c41ae2478d71/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/81b777ae-8ba4-4206-a0b3-c41ae2478d71/$leavingCustomActions/1"
+        }
+      ],
+      "journeyId": "vivofixadados",
+      "originalBehavior": "Redirect entrega ao bot de destino um contexto inicial (tipo e valor).",
+      "proposedBehavior": "Contexto gravado na variavel redirect_context e repassado via variablesToPass.",
+      "reason": "Typebot link nao tem campo de contexto inicial.",
+      "kind": "integration",
+      "changesBusinessBehavior": false,
+      "targetStrategy": "variables-to-pass",
+      "fallback": {
+        "kind": null,
+        "queueBindingKey": null,
+        "logicalFlow": null,
+        "promptText": null,
+        "retryPolicy": null,
+        "endReason": null
+      },
+      "acceptance": {
+        "status": "proposed",
+        "responsible": null,
+        "date": null,
+        "evidenceFile": null
+      },
+      "validationScenarioIds": [],
+      "occurrences": 10
+    },
+    {
+      "id": "vivofixadados:script-reads-message-envelope",
+      "sourceLocations": [
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd/$leavingCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/26fe2d2c-803e-48b7-a5a7-9fdf2216687f/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f1c50ea9-3cdf-4bf6-be41-a192934403cf/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9891669e-2a07-4b9a-82b5-d3f4f4830356/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9891669e-2a07-4b9a-82b5-d3f4f4830356/$leavingCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/34cbc04f-3737-4f5e-9cb6-11ce20c0a9c4/$leavingCustomActions/0"
+        }
+      ],
+      "journeyId": "vivofixadados",
+      "originalBehavior": "Script le o envelope completo da mensagem recebida (metadados do WhatsApp).",
+      "proposedBehavior": "Argumento remontado por um shim (conteudo + retorno do Flow em metadata); metadados de anuncio (#wa.referral.*) nao existem no Kayros e chegam ausentes.",
+      "reason": "O envelope input.message nao existe no Kayros; o retorno do Flow chega em flow_response.",
+      "kind": "validation",
+      "changesBusinessBehavior": true,
+      "targetStrategy": "envelope-shim",
+      "fallback": {
+        "kind": null,
+        "queueBindingKey": null,
+        "logicalFlow": null,
+        "promptText": null,
+        "retryPolicy": null,
+        "endReason": null
+      },
+      "acceptance": {
+        "status": "proposed",
+        "responsible": null,
+        "date": null,
+        "evidenceFile": null
+      },
+      "validationScenarioIds": [],
+      "occurrences": 7
+    },
+    {
+      "id": "vivofixadados:script-syntax-incompatible",
+      "sourceLocations": [
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/6b0e5a9d-0239-44bc-be37-a53760d6bd84/$leavingCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/dd454e27-b995-4c4f-a49a-a6aaf1005383/$leavingCustomActions/4"
+        }
+      ],
+      "journeyId": "vivofixadados",
+      "originalBehavior": "Script aceito pelo interpretador da Blip.",
+      "proposedBehavior": "Script mantido verbatim e sinalizado; requer correcao manual porque o Code do Kayros (V8) rejeita a sintaxe.",
+      "reason": "Diferenca de interpretador JavaScript entre as plataformas.",
+      "kind": "validation",
+      "changesBusinessBehavior": true,
+      "targetStrategy": "manual-fix",
+      "fallback": {
+        "kind": null,
+        "queueBindingKey": null,
+        "logicalFlow": null,
+        "promptText": null,
+        "retryPolicy": null,
+        "endReason": null
+      },
+      "acceptance": {
+        "status": "proposed",
+        "responsible": null,
+        "date": null,
+        "evidenceFile": null
+      },
+      "validationScenarioIds": [],
+      "occurrences": 2
+    },
+    {
+      "id": "vivofixadados:ttl-session",
+      "sourceLocations": [
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/fallback/$enteringCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/c8884dc9-83d1-4fe6-b1d6-113500929a5b/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/c8884dc9-83d1-4fe6-b1d6-113500929a5b/$enteringCustomActions/4"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/6edb0c7c-d6e1-42b3-ab10-6ad3992286b1/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/6edb0c7c-d6e1-42b3-ab10-6ad3992286b1/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/a038c05c-54a5-44d2-8399-c9600b6d4f83/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ff3117d1-a373-4361-9cb7-57505737ca9f/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/b8af9f00-0c7f-4496-b0ca-383c95476867/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/fa814fe2-21c6-4945-b72b-f245dfc003f0/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/fa814fe2-21c6-4945-b72b-f245dfc003f0/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/fa814fe2-21c6-4945-b72b-f245dfc003f0/$enteringCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/fa814fe2-21c6-4945-b72b-f245dfc003f0/$enteringCustomActions/3"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/fa814fe2-21c6-4945-b72b-f245dfc003f0/$leavingCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/32c3d55c-d7ca-402b-8ee5-7c77f895add4/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/21b346b6-0275-440b-b3a7-dbaabfdb6f41/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9e6b6b11-c8b2-4ab4-b1d6-4f55f75cb449/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0ef8258a-514a-4e5a-86b6-e3b54c2db16e/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0ef8258a-514a-4e5a-86b6-e3b54c2db16e/$enteringCustomActions/5"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ef0d808a-3c4d-4128-ba66-fb07f10ed794/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0ad75c48-bb89-487a-a93f-01cf049a99e5/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0ad75c48-bb89-487a-a93f-01cf049a99e5/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0ad75c48-bb89-487a-a93f-01cf049a99e5/$leavingCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/cd52b86a-be0d-4011-ae9b-299bc8ce88f6/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/8b39391c-a004-4ce2-b704-758abb5602b4/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/466acb13-8c9b-4506-8747-2a0a264e4973/$enteringCustomActions/6"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/c4767dc2-a2b4-40de-8e2f-6cd28828cf66/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/5f828763-a8a5-4e4b-b31a-ce182e395536/$leavingCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9df292d0-3560-4e61-8c29-17ce0d9c9cd3/$enteringCustomActions/4"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0d93db1c-11cd-4957-a817-09e2e04f565d/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0d93db1c-11cd-4957-a817-09e2e04f565d/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0d93db1c-11cd-4957-a817-09e2e04f565d/$enteringCustomActions/3"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0d93db1c-11cd-4957-a817-09e2e04f565d/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0313fd19-c008-454f-8f16-30b1a24845e5/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0313fd19-c008-454f-8f16-30b1a24845e5/$enteringCustomActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0313fd19-c008-454f-8f16-30b1a24845e5/$leavingCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ae5c2fa1-576e-4996-9694-eeca8f052a5f/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ae5c2fa1-576e-4996-9694-eeca8f052a5f/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0d6d9d60-c8cc-49c8-a97f-0dac4da1f5ec/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0d6d9d60-c8cc-49c8-a97f-0dac4da1f5ec/$leavingCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f77e0399-82ce-4e0c-a96a-a1a1c1c5e10e/$enteringCustomActions/4"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f77e0399-82ce-4e0c-a96a-a1a1c1c5e10e/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ec6037ff-8e12-49a2-8eaa-4db3d9bb4757/$enteringCustomActions/6"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd/$enteringCustomActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd/$leavingCustomActions/7"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd/$leavingCustomActions/8"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd/$leavingCustomActions/9"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/99c60a3b-f041-46b4-a239-47eb6710e501/$leavingCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/26fe2d2c-803e-48b7-a5a7-9fdf2216687f/$enteringCustomActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/26fe2d2c-803e-48b7-a5a7-9fdf2216687f/$enteringCustomActions/2"
+        }
+      ],
+      "journeyId": "vivofixadados",
+      "originalBehavior": "Variavel de contexto expira apos o prazo configurado na Blip.",
+      "proposedBehavior": "Valor mantido na sessao do Kayros, sem expiracao propria.",
+      "reason": "Set variable do Kayros nao tem TTL; recursos nao sao armazenamento por cliente.",
+      "kind": "data",
+      "changesBusinessBehavior": true,
+      "targetStrategy": "session-variable",
+      "fallback": {
+        "kind": null,
+        "queueBindingKey": null,
+        "logicalFlow": null,
+        "promptText": null,
+        "retryPolicy": null,
+        "endReason": null
+      },
+      "acceptance": {
+        "status": "accepted",
+        "responsible": "Renan",
+        "date": "2026-11-02",
+        "evidenceFile": "docs/piloto/aceite-dados-2026-11-02.md"
+      },
+      "validationScenarioIds": [],
+      "occurrences": 73
+    },
+    {
+      "id": "vivofixadados:typing-indicator-dropped",
+      "sourceLocations": [
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/466acb13-8c9b-4506-8747-2a0a264e4973/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0d93db1c-11cd-4957-a817-09e2e04f565d/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0313fd19-c008-454f-8f16-30b1a24845e5/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ae5c2fa1-576e-4996-9694-eeca8f052a5f/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f302c7d1-fac3-4374-bd00-c7c15fc088fb/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0d6d9d60-c8cc-49c8-a97f-0dac4da1f5ec/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/39006007-54b2-477b-a9f6-9539f821770f/$contentActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/319bd71c-e0ae-42d8-96f5-16dc1714e60b/$contentActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/319bd71c-e0ae-42d8-96f5-16dc1714e60b/$contentActions/3"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/5c0d2633-cfab-4bb7-9bea-88d63f6aaddd/$contentActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/ec6037ff-8e12-49a2-8eaa-4db3d9bb4757/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/78d16ed7-f131-4b0d-9f66-3a20d55950dd/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/99c60a3b-f041-46b4-a239-47eb6710e501/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/a0c7aba9-48cc-44da-b2bf-ff7b1b2f3d5b/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f1c50ea9-3cdf-4bf6-be41-a192934403cf/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f7129d02-7ee8-42b7-9244-a093f9fcfa13/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/1d2ce66c-76de-4847-aa4d-0ef3972f81d7/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/7a4648e2-4ad1-42bf-a792-f0406d6c7fbf/$contentActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/0111b9d4-78ca-4c7c-9d74-13a0784d25aa/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/7b9039b7-c8e2-415a-84b7-f7762c6d4c0a/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/629aa758-2384-48ff-9d80-74fb513ed844/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/04bd28ee-1e40-48aa-843f-2e2b939a0db9/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f235f9ee-c29d-4f82-a62a-5c8e3c21a424/$contentActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/99e09c5e-0d6c-49fc-abba-e2d66a90f06d/$contentActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/afdc9d14-4d8e-43da-9fc3-0f14fe715d12/$contentActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/7d5669fb-0746-4224-9ce2-bbb1492212ae/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/e172db1b-ba8e-4fbb-a36a-e7927f1a58cd/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/bb52f419-a9ca-4a79-aebe-f2f23fefac69/$contentActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/43bcc488-5742-44ee-9ea0-4a40a1d286d0/$contentActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/c025e71b-2576-4ab3-997d-796f8dda27d7/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/8e0ba074-1bcf-4e2b-a2d5-68ea0389e241/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f217e64e-76f8-4fe4-8158-f88e167579e3/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f217e64e-76f8-4fe4-8158-f88e167579e3/$contentActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/4e0d1d82-4496-4efa-aece-24750b5f8ae5/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9c5a1613-b88f-4671-b034-1e3dae157fb2/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9c5a1613-b88f-4671-b034-1e3dae157fb2/$contentActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/846b5065-aa7a-426a-b168-2edd1acdbb78/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/846b5065-aa7a-426a-b168-2edd1acdbb78/$contentActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/27dd308a-2299-4f39-8ce5-ee54af879703/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/27dd308a-2299-4f39-8ce5-ee54af879703/$contentActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/62b928df-9c69-4d44-a7cc-6008e635cc39/$contentActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/62b928df-9c69-4d44-a7cc-6008e635cc39/$contentActions/3"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/39185831-39d8-497c-981e-115280ba33c8/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/39185831-39d8-497c-981e-115280ba33c8/$contentActions/2"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/3bc1eb2c-9ab4-43cc-9e3f-9fa5c2a258a8/$contentActions/1"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/51391189-5068-418d-9359-fe872ae04b63/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/27951029-775c-40f9-b1dc-eee72a99c13f/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/7be630c9-e40e-4e20-83eb-4db9b530521d/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/f59c94e9-f5b6-4a26-b1a8-dc8a34c50ba5/$contentActions/0"
+        },
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/9891669e-2a07-4b9a-82b5-d3f4f4830356/$contentActions/0"
+        }
+      ],
+      "journeyId": "vivofixadados",
+      "originalBehavior": "Indicador de digitacao (chatstate composing) antes de mensagens.",
+      "proposedBehavior": "Omitido; o envio sai sem indicador.",
+      "reason": "Mudanca de apresentacao que preserva o resultado.",
+      "kind": "presentation",
+      "changesBusinessBehavior": false,
+      "targetStrategy": "omit",
+      "fallback": {
+        "kind": null,
+        "queueBindingKey": null,
+        "logicalFlow": null,
+        "promptText": null,
+        "retryPolicy": null,
+        "endReason": null
+      },
+      "acceptance": {
+        "status": "proposed",
+        "responsible": null,
+        "date": null,
+        "evidenceFile": null
+      },
+      "validationScenarioIds": [],
+      "occurrences": 63
+    },
+    {
+      "id": "vivofixadados:wait-without-message:13af0f48",
+      "sourceLocations": [
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/13af0f48-438e-4a8b-aa0a-478fa6d01ea5"
+        }
+      ],
+      "journeyId": "vivofixadados",
+      "originalBehavior": "Estado aguarda entrada do usuario sem enviar mensagem.",
+      "proposedBehavior": "Pergunta curta e contextualizada com aguardo de resposta; eliminavel se a espera for dispensavel (revisar por estado).",
+      "reason": "O Kayros so aguarda resposta apos um envio (awaitReply no bloco WhatsApp).",
+      "kind": "wait",
+      "changesBusinessBehavior": true,
+      "targetStrategy": "contextual-question",
+      "fallback": {
+        "kind": "contextual-question",
+        "queueBindingKey": null,
+        "logicalFlow": null,
+        "promptText": "Pode me confirmar para continuarmos?",
+        "retryPolicy": null,
+        "endReason": null
+      },
+      "acceptance": {
+        "status": "accepted",
+        "responsible": "Renan",
+        "date": "2026-11-02",
+        "evidenceFile": "docs/piloto/aceite-esperas-2026-11-02.md"
+      },
+      "validationScenarioIds": [],
+      "occurrences": 1
+    },
+    {
+      "id": "vivofixadados:wait-without-message:51550a60",
+      "sourceLocations": [
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/51550a60-4692-4c46-8768-da65e04919f0"
+        }
+      ],
+      "journeyId": "vivofixadados",
+      "originalBehavior": "Estado aguarda entrada do usuario sem enviar mensagem.",
+      "proposedBehavior": "Espera dispensavel removida: o fluxo segue sem aguardar.",
+      "reason": "Decisao aceita de remover a espera.",
+      "kind": "wait",
+      "changesBusinessBehavior": true,
+      "targetStrategy": "remove-wait",
+      "fallback": {
+        "kind": "remove",
+        "queueBindingKey": null,
+        "logicalFlow": null,
+        "promptText": null,
+        "retryPolicy": null,
+        "endReason": null
+      },
+      "acceptance": {
+        "status": "accepted",
+        "responsible": "Renan",
+        "date": "2026-11-02",
+        "evidenceFile": "docs/piloto/aceite-esperas-2026-11-02.md"
+      },
+      "validationScenarioIds": [],
+      "occurrences": 1
+    },
+    {
+      "id": "vivofixadados:wait-without-message:5e7c8d2b",
+      "sourceLocations": [
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/5e7c8d2b-c9aa-4db9-9f1b-c7c70d81ba84"
+        }
+      ],
+      "journeyId": "vivofixadados",
+      "originalBehavior": "Estado aguarda entrada do usuario sem enviar mensagem.",
+      "proposedBehavior": "Pergunta curta e contextualizada com aguardo de resposta; eliminavel se a espera for dispensavel (revisar por estado).",
+      "reason": "O Kayros so aguarda resposta apos um envio (awaitReply no bloco WhatsApp).",
+      "kind": "wait",
+      "changesBusinessBehavior": true,
+      "targetStrategy": "contextual-question",
+      "fallback": {
+        "kind": "contextual-question",
+        "queueBindingKey": null,
+        "logicalFlow": null,
+        "promptText": "Pode me confirmar para continuarmos?",
+        "retryPolicy": null,
+        "endReason": null
+      },
+      "acceptance": {
+        "status": "accepted",
+        "responsible": "Renan",
+        "date": "2026-11-02",
+        "evidenceFile": "docs/piloto/aceite-esperas-2026-11-02.md"
+      },
+      "validationScenarioIds": [],
+      "occurrences": 1
+    },
+    {
+      "id": "vivofixadados:wait-without-message:cd52b86a",
+      "sourceLocations": [
+        {
+          "bot": "vivofixadados",
+          "file": "bots/vivofixadados-213cf7299e99/fluxo-vivofixadados-213cf7299e99.json",
+          "jsonPointer": "/configuracoes_gerais/fluxo/flow/cd52b86a-be0d-4011-ae9b-299bc8ce88f6"
+        }
+      ],
+      "journeyId": "vivofixadados",
+      "originalBehavior": "Estado aguarda entrada do usuario sem enviar mensagem.",
+      "proposedBehavior": "Pergunta curta e contextualizada com aguardo de resposta; eliminavel se a espera for dispensavel (revisar por estado).",
+      "reason": "O Kayros so aguarda resposta apos um envio (awaitReply no bloco WhatsApp).",
+      "kind": "wait",
+      "changesBusinessBehavior": true,
+      "targetStrategy": "contextual-question",
+      "fallback": {
+        "kind": "contextual-question",
+        "queueBindingKey": null,
+        "logicalFlow": null,
+        "promptText": "Pode me confirmar para continuarmos?",
+        "retryPolicy": null,
+        "endReason": null
+      },
+      "acceptance": {
+        "status": "accepted",
+        "responsible": "Renan",
+        "date": "2026-11-02",
+        "evidenceFile": "docs/piloto/aceite-esperas-2026-11-02.md"
+      },
+      "validationScenarioIds": [],
+      "occurrences": 1
+    }
+  ],
+  "pendingAcceptance": [
+    "vivofixadados:blip-command",
+    "vivofixadados:flow-reply-detection",
+    "vivofixadados:input-message-envelope",
+    "vivofixadados:input-timeout-followup",
+    "vivofixadados:script-reads-message-envelope",
+    "vivofixadados:script-syntax-incompatible"
+  ]
+}

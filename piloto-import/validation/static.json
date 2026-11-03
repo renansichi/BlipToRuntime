@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "2.0",
+  "perBot": [
+    {
+      "bot": "vivofixadados",
+      "status": "structurally_valid",
+      "stats": {
+        "states": 129,
+        "groups": 597,
+        "blocks": 1480,
+        "edges": 1418
+      },
+      "errors": []
+    },
+    {
+      "bot": "vivofixadados",
+      "status": "structurally_valid",
+      "stats": {
+        "states": 129,
+        "groups": 598,
+        "blocks": 1481,
+        "edges": 1419
+      },
+      "errors": []
+    },
+    {
+      "bot": "vivofixadados",
+      "status": "structurally_valid",
+      "stats": {
+        "states": 129,
+        "groups": 598,
+        "blocks": 1481,
+        "edges": 1419
+      },
+      "errors": []
+    },
+    {
+      "bot": "vivofixadados",
+      "status": "structurally_valid",
+      "stats": {
+        "states": 129,
+        "groups": 598,
+        "blocks": 1481,
+        "edges": 1419
+      },
+      "errors": []
+    }
+  ]
+}

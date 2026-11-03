@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "2.0",
+  "note": "Todo estado, acao, conteudo, input e saida da origem tem entrada no mapa de origem (traducao, adaptacao, omissao justificada ou nao emitido apos acao terminal).",
+  "perBot": [
+    {
+      "bot": "vivofixadados",
+      "expected": {
+        "state": 129,
+        "action": 687,
+        "content": 162,
+        "input": 129,
+        "exit": 434
+      },
+      "mapped": {
+        "state": 129,
+        "action": 687,
+        "content": 162,
+        "input": 129,
+        "exit": 434
+      },
+      "byTransformation": {
+        "command-unmapped": 4,
+        "exit-condition": 262,
+        "exit-default": 120,
+        "exit-timeout-router": 41,
+        "http-webhook": 85,
+        "input-await": 56,
+        "input-bypass": 70,
+        "input-first-message": 1,
+        "input-skipped-after-terminal": 1,
+        "input-wait-removed": 1,
+        "merge-contact-discarded": 98,
+        "merge-contact-session": 57,
+        "merge-contact-session-partial-discard": 3,
+        "message-media": 2,
+        "message-raw": 24,
+        "message-select": 20,
+        "message-text": 53,
+        "redirect-typebot-link": 11,
+        "script": 148,
+        "set-variable": 142,
+        "skipped-after-terminal": 13,
+        "state-group": 129,
+        "track-event": 137,
+        "typing-indicator-omitted": 63
+      },
+      "uncovered": []
+    }
+  ]
+}
